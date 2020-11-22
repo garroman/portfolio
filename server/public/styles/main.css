@@ -8,9 +8,10 @@
   background: #314755;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #222, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: url("../wallpaper.jpg");
-  background-position: center;
-  background-size: cover;
+  background: url("../bgtry-6.jpg");
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 
@@ -120,7 +121,7 @@
 
 .icon {
   font-size: 275%;
-  color: #fff;
+  color: #9aedfe;
   margin-right: 5px;
 }
 
@@ -147,9 +148,27 @@
 
 .icon-span {
   margin-left: 5px;
+  text-shadow: 4px 4px 4px #000;
   color: #fff;
   font-size: 40px;
   font-family: 'Lobster', cursive;
 }
 
+.icon-span:hover {
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+/* MISC */
+.shadow-w {
+  text-shadow: 1px 4px 7px #aaa;
+  font-size: 80px;
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
+  height: 120px;
+}
+
+.shadow-b {
+  text-shadow: 4px 4px 4px #000;
+}
 
