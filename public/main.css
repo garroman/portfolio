@@ -1,10 +1,9 @@
-/* GENERAL */
-
+/* GENERAL */w
 .main {
   margin: 0 auto;
   width: 100%;
   color: #3c3836;
-  height: 150vh;
+  height: 200vh;
   background: #314755;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #1d2021, #282828); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -29,6 +28,17 @@
   cursor: pointer;
   text-decoration: underline;
   color: #9aedfe;
+}
+
+/* SECTION SEPARATOR */
+.section-separator {
+  text-transform: uppercase;
+  display: flex;
+  color: #9aedfe;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-size: 50px;
+  font-family: 'Poppins';
 }
 
 
