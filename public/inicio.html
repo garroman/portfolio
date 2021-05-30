@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html> <head> <meta charset="UTF-8" />
-    <title>Home | RLG</title>
+    <title>Inicio | RLG</title>
     <link rel="stylesheet" href="./main.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
@@ -22,48 +22,46 @@
         </ul>
 
         <ul class="section-nav">
-          <li><a class="nav-a" data-page="presentation" href="#presentation">home</a></li>
-          <li><a class="nav-a" data-page="projects" href="#projects">portfolio</a></li>
-          <li><a class="nav-a" data-page="contact" href="#contact">contact</a></li>
+          <li><a data-page="presentation" onclick="getLocation()" href="#presentation">home</a></li>
+          <li><a data-page="projects" href="#projects">portfolio</a></li>
+          <li><a data-page="contact" href="#contact">contact</a></li>
         </ul>
      </header>
 
-      
       <!-- presentation -->
       <section id="presentation">
         <div id="pres-content">
           <div id="pres-info">
-            <h2>Hello, I'm Roman Lopez Garro</h2>
-						<h3 class="info-h3"><span class="dev-desc">Software developer and cs student.</span></h3>
+            <h2>Hola, Soy Román López Garro</h2>
+						<h3 class="info-h3"><span class="dev-desc">Desarrollador y estudiante de computación.</span></h3>
           </div>
         </div>
       </section> 
 
       <section id="projects">
-          <p class="section-separator">projects</p>
+          <p class="section-separator">proyectos</p>
           <br><br>
         </strong>
       </section>
 
       <section id="contact">
-          <p class="section-separator">contact me </p>
+          <p class="section-separator">contacto</p>
           <br><br>
-          <h2>Get in touch with me, send a message or click onto my<a style="margin-left: 5px; margin-right: 5px;" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" target="_blank">linkedin</a>profile</h2>
+          <h2>Mandame un mensaje a traves de este formulario o contactame a traves de mi perfil de <a style="margin-left: 5px;" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" target="_blank"> linkedin</a></h2>
           <div id="contactme">
             <form>
-              <input name="first-name" placeholder="name" type="text"/>
+              <input name="first-name" placeholder="Nombre" type="text"/>
               <br>
-              <input name="email" placeholder="email" type="email"/>
+              <input name="email" placeholder="Email" type="email"/>
               <br>
-              <input name="subject" placeholder="subject" type="text"/>
+              <input name="subject" placeholder="Sujeto" type="text"/>
               <br>
-              <input name="message" placeholder="message" type="text"/>
+              <input name="message" placeholder="Mensaje" type="text"/>
               <br>
-              <button type="submit">Send</button>
+              <button type="submit">Enviar</button>
             </form>
           </div>
       </section>
-
     <script src="https://kit.fontawesome.com/570ef02fb1.js" crossorigin="anonymous"></script>
     <script>
 
