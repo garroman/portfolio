@@ -65,46 +65,7 @@
       </section>
 
     <script src="https://kit.fontawesome.com/570ef02fb1.js" crossorigin="anonymous"></script>
-    <script>
-
-      // LANGUAGE STUFF
-      const activeColor = "#B16286";
-      let isInSpanish = false; 
-
-      let spanishSwitch = document.getElementById("spanish-switch");
-      let englishSwitch = document.getElementById("english-switch");
-
-      if(isInSpanish) {
-        spanishSwitch.style.color = activeColor; } else {
-        englishSwitch.style.color = activeColor;
-      }
-
-      // NAVBAR STUFF
-      const sections = document.querySelectorAll("section");
-      const options = {
-        threshold: 0.8
-      };
-      let observer = new IntersectionObserver(navCheck, options);
-      
-      function navCheck(entries) {
-        entries.forEach(entry => {
-          const entryId = entry.target.id;
-          const activeAnchor = document.querySelector(`[data-page=${entryId}]`);
-          const allAnchors = document.getElementsByClassName("nav-a");
-          console.log(allAnchors);
-          if(entry.isIntersecting) {
-            for(let i = 0; i < allAnchors.length; i++) {
-              allAnchors[i].classList.remove("active");
-            }
-            activeAnchor.classList.add("active");
-          }
-        });
-      }
-      
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-
-    </script>
+    <script src="./lang.js"></script>
+    <script src="./nav.js"></script>
   </body>
 </html>
