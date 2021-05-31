@@ -3,8 +3,8 @@ window.addEventListener("load", () => {
     // LANGUAGE STUFF
     const activeColor = "#B16286";
     const page = window.location.href.split("/");
-    let isInSpanish = "";
-    if (page[page.length-1] === "index.html") {
+    let isInSpanish = false;
+    if (page[page.length-1].includes("index.html")) {
       isInSpanish = false;
     } else {
       isInSpanish = true;

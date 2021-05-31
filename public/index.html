@@ -14,17 +14,17 @@
     <!-- navbar -->
      <header id="navbar">
         <ul>
-          <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i></a></li>
-          <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+          <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-gitlab" title="Gitlab profile" aria-hidden="true"></i></a></li>
+          <li><a class="pi-links" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" title="Linkedin profile" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
           <li><a href="">| </a></li>
-          <li><a class="lang-set" id="english-switch" href="./index.html">en</a></li>
-          <li><a class="lang-set" id="spanish-switch" href="./inicio.html">es</a></li>
+          <li><a class="lang-set" id="english-switch" title="Language is set to english" href="./index.html">en</a></li>
+          <li><a class="lang-set" id="spanish-switch" title="Set language to spanish"href="./inicio.html">es</a></li>
         </ul>
 
         <ul class="section-nav">
-          <li><a class="nav-a" data-page="presentation" href="#presentation">home</a></li>
-          <li><a class="nav-a" data-page="projects" href="#projects">portfolio</a></li>
-          <li><a class="nav-a" data-page="contact" href="#contact">contact</a></li>
+          <li><a class="nav-a" data-page="presentation" title="Home section" href="#presentation">home</a></li>
+          <li><a class="nav-a" data-page="projects" title="Projects section" href="#projects">portfolio</a></li>
+          <li><a class="nav-a" data-page="contact" title="Contact section" href="#contact">contact</a></li>
         </ul>
      </header>
 
@@ -48,19 +48,22 @@
       <section id="contact">
           <p class="section-separator">contact me </p>
           <br><br>
-          <h2>Get in touch with me, send a message or click onto my<a style="margin-left: 5px; margin-right: 5px;" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" target="_blank">linkedin</a>profile</h2>
-          <div id="contactme">
-            <form>
-              <input name="first-name" placeholder="name" type="text"/>
-              <br>
-              <input name="email" placeholder="email" type="email"/>
-              <br>
-              <input name="subject" placeholder="subject" type="text"/>
-              <br>
-              <input name="message" placeholder="message" type="text"/>
-              <br>
-              <button type="submit">Send</button>
-            </form>
+          <!--<h2>Get in touch with me, send me an email or click onto my<a style="margin-left: 5px; margin-right: 5px;" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" target="_blank">linkedin</a>profile</h2>
+          -->
+          <div id="contact-info">
+            <div id="contact-form">
+              <form action="https://formsubmit.co/garrodev18@gmail.com" method="POST">
+                <input name="first-name" placeholder=" Full name" type="text" required />
+                <br>
+                <input name="email" placeholder=" Email" type="email" required />
+                <br>
+                <input name="subject" placeholder=" Subject" type="text" required />
+                <br>
+                <textarea name="message" placeholder=" Message" required ></textarea>
+                <br>
+                <button type="submit">Send email</button>
+              </form>
+            </div>
           </div>
       </section>
 
