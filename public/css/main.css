@@ -3,6 +3,7 @@ html, body {
   background: var(--bg);
   margin: 0 ;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   /* VARIABLES */
   --pink: #D3869B;

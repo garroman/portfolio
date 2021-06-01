@@ -2,9 +2,9 @@
 window.addEventListener("load", () => {
     // LANGUAGE STUFF
     const activeColor = "#B16286";
-    const page = window.location.href.split("/");
     let isInSpanish = false;
-    if (page[page.length-1].includes("index.html")) {
+    const title = document.querySelector("title");
+    if (title.classList.contains("en")) {
       isInSpanish = false;
     } else {
       isInSpanish = true;
@@ -15,7 +15,8 @@ window.addEventListener("load", () => {
     let englishSwitch = document.getElementById("english-switch");
 
     if(isInSpanish) {
-      spanishSwitch.style.color = activeColor; } else {
+      spanishSwitch.style.color = activeColor; }
+    else {
       englishSwitch.style.color = activeColor;
     }
 });
