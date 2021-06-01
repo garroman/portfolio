@@ -1,55 +1,67 @@
 <!DOCTYPE html>
-<html> <head> <meta charset="UTF-8" />
-    <title>Home | RLG</title>
-    <link rel="stylesheet" href="./main.css"> 
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inicio | RLG</title>
+    <link rel="stylesheet" href="./css/nav.css"> 
+    <link rel="stylesheet" href="./css/presentation.css"> 
+    <link rel="stylesheet" href="./css/projects.css"> 
+    <link rel="stylesheet" href="./css/contact.css"> 
+    <link rel="stylesheet" href="./css/main.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
     <!-- navbar -->
-     <header id="navbar">
+     <nav id="navbar">
         <ul>
           <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-gitlab" title="Gitlab profile" aria-hidden="true"></i></a></li>
           <li><a class="pi-links" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" title="Linkedin profile" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
           <li><a href="">| </a></li>
-          <li><a class="lang-set" id="english-switch" title="Cambiar idioma a ingles" href="./index.html">en</a></li>
-          <li><a class="lang-set" id="spanish-switch" title="El idioma esta en español"href="./inicio.html">es</a></li>
+          <li><a class="lang-set" id="english-switch" title="Language is set to english" href="./index.html">en</a></li>
+          <li><a class="lang-set" id="spanish-switch" title="Set language to spanish"href="./inicio.html">es</a></li>
         </ul>
 
-        <ul class="section-nav">
+        <ul class="nav-links">
           <li><a class="nav-a" data-page="presentation" title="Home section" href="#presentation">inicio</a></li>
           <li><a class="nav-a" data-page="projects" title="Projects section" href="#projects">proyectos</a></li>
           <li><a class="nav-a" data-page="contact" title="Contact section" href="#contact">contacto</a></li>
         </ul>
-     </header>
+
+        <div class="menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+
+     </nav>
 
       
       <!-- presentation -->
       <section id="presentation">
         <div id="pres-content">
           <div id="pres-info">
-            <h2>Hola, Soy Román López Garro</h2>
-						<h3 class="info-h3"><span class="dev-desc">Developer y estudiante de computación Argentino.</span></h3>
+            <h2 class="title" id="original-title">Hola, soy Román López Garro</h2>
+            <h2 class="title" id="smaller-title">Hola, soy Román</h2>
+						<h3 class="info-h3"><span class="dev-desc">Developer y estudiante de computación.</span></h3>
+            <p><a href="#projects"><button class="button">ver proyectos</button></a></p>
           </div>
         </div>
       </section> 
 
       <section id="projects">
-          <p class="section-separator">proyectos</p>
+          <p class="section-separator">Proyectos</p>
           <br><br>
         </strong>
       </section>
 
       <section id="contact">
-          <p class="section-separator">Contactáme</p>
+          <p class="section-separator">contactáme </p>
           <br><br>
-          <!--<h2>Get in touch with me, send me an email or click onto my<a style="margin-left: 5px; margin-right: 5px;" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" target="_blank">linkedin</a>profile</h2>
-          -->
           <div id="contact-info">
             <div id="contact-form">
               <form action="https://formsubmit.co/garrodev18@gmail.com" method="POST">
@@ -57,18 +69,18 @@
                 <br>
                 <input name="email" placeholder=" Email" type="email" required />
                 <br>
-                <input name="subject" placeholder=" Sujeto del mensaje" type="text" required />
+                <input name="subject" placeholder=" Sujeto" type="text" required />
                 <br>
-                <textarea name="message" placeholder=" Mensaje" required ></textarea>
+                <textarea name="message" placeholder=" Mensage" required ></textarea>
                 <br>
-                <button type="submit">Enviar email</button>
+                <button class="button" type="submit">enviar</button>
               </form>
             </div>
           </div>
       </section>
 
     <script src="https://kit.fontawesome.com/570ef02fb1.js" crossorigin="anonymous"></script>
-    <script src="./lang.js"></script>
-    <script src="./nav.js"></script>
+    <script src="./js/lang.js"></script>
+    <script src="./js/nav.js"></script>
   </body>
 </html>

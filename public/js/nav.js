@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
 });
 
-const slider = () => {
+let slider = () => {
 
     const menu = document.querySelector(".menu"); 
     const nav  = document.querySelector(".nav-links");
@@ -14,11 +14,10 @@ const slider = () => {
     const navLinks = document.querySelectorAll(".nav-links li");
 
 
-
     menu.addEventListener("click", () => {
       
       // Toggle nav
-      nav.classList.toggle("nav-active");
+      nav.classList.toggle("active");
 
       // Toggle animation
       navLinks.forEach((link, index) => {
@@ -28,7 +27,7 @@ const slider = () => {
 
         } else {
 
-         link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+          link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.5}s`;
 
         }
 
