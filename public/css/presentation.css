@@ -19,7 +19,7 @@
   justify-content: center;
   text-transform: uppercase;
   align-items: end;
-  color: var(--pink-text);
+  color: var(--dark-pink);
 }
 
 #pres-info p{
@@ -34,7 +34,7 @@
 #pres-info p button{
   width: 300px;
   text-transform: capitalize;
-  color: var(--blue-text);
+  color: var(--blue);
   font-size: 28px;
   font-weight: 600;
 }
@@ -61,6 +61,7 @@
   margin-top: 2%;
   height: 20%;
 	font-weight: 300;
+  font-weight: bold;
 }
 
 #pres-info {

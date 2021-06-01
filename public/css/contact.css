@@ -28,7 +28,7 @@
 }
 
 ::placeholder {
-  color: var(--cyan-text);
+  color: var(--cyan);
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
@@ -53,12 +53,11 @@
   padding-left: 0px;
   font-size: 22px;
   border-radius: 8px;
-  border-color: #fff;
+  border-color: var(--dark-pink);
 }
 
 #contact-form input, textarea {
-  background-color: #eeeeee;
-  border-width: 0;
+  background-color: var(--nav-bg);
   border-width: 0;
 }
 

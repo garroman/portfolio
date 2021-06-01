@@ -5,13 +5,16 @@ html, body {
   scroll-behavior: smooth;
 
   /* VARIABLES */
-  --pink-text: #D3869B;
-  --cyan-text: #458588;
-  --blue-text: #83a598;
-  --orange-text: #fe8019;
-  --nav-bg: #000;
-  --bg: #111;
-  --press-h2-fg: #fff;
+  --pink: #D3869B;
+  --dark-pink: #B16286;
+  --cyan: #458588;
+  --blue: #83a598;
+  --orange: #b8bb26;
+  --yellow: #fabd2f;
+  --dark-yellow: #d79921;
+  --nav-bg: #fff;
+  --bg: #eee;
+  --press-h2-fg: #444;
   --projects-bg: var(--bg);
   --contact-bg: #282828; 
   --text-shadow: 1px 1px 1px #aaa;
@@ -28,7 +31,7 @@ html, body {
   background-color: var(--nav-bg);
   border-color: var(--nav-bg);
   height: 40px;
-  color: var(--pink-text);
+  color: var(--pink);
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -85,7 +88,7 @@ section {
   #pres-info p button{
     width: 200px;
     text-transform: capitalize;
-    color: var(--blue-text);
+    color: var(--blue);
     font-weight: 600;
     font-size: 22px;
   }
@@ -128,7 +131,7 @@ section {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 5vh;
+    top: 4vh;
     background-color: var(--nav-bg);
     display: flex;
     flex-direction: column;
@@ -190,10 +193,57 @@ section {
 
 }
 
+@media (max-width: 510px) {
+
+  .nav-links {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  #pres-info h2{
+    font-size: 40px;
+  }
+
+  .info-h3 span{
+    font-size: 17px;
+  }
+
+  #navbar ul li a{
+    font-size: 19px;
+  }
+
+  #misc-links {
+    margin-right: 10px;
+  }
+
+  #misc-links li{
+    margin: 5px;
+  }
+
+  #pres-info p button{
+    font-size: 16px;
+    width: 150px;
+    height: 35px;
+  }
+
+  .menu {
+    margin-left: 29px;
+  }
+
+  #original-title {
+    display: none;
+  }
+
+  #smaller-title {
+    display: flex; 
+  }
+
+}
 
 .active {
-  color: var(--cyan-text);
+  color: var(--cyan);
 }
+
 @keyframes navLinksFade{
   
   from{

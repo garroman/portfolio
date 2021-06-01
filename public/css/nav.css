@@ -4,7 +4,7 @@ nav {
   top: 0;
 	width: 100%;
 	color: #444;
-  background-color: #000;
+  background-color: var(--nav-bg);
   display: flex;
   position: sticky;
   justify-content: center;
@@ -12,6 +12,9 @@ nav {
   user-select: none;
 }
 
+.activated {
+  color: var(--dark-yellow);
+}
 
 ul {
 	display: flex;
@@ -22,7 +25,7 @@ ul {
 }
 
 ul li {
-	margin: 15px;
+	margin: 13px;
 	list-style:none;
 }
 
@@ -35,38 +38,54 @@ ul li a{
   color: #777;
 }
 
+.separator {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
 .nav-links a:hover:not(.active){
   text-decoration: none;
-  color: var(--blue-text);
+  color: var(--blue);
 }
 
 .menu {
+  margin-left: 50px;
   display: none;
   cursor: pointer;
 }
 
 .menu div{
-
-  width: 25px;
+  width: 29px;
   height: 3px;
-  background-color: var(--pink-text);
+  background-color: var(--cyan);
   margin: 5px;
+}
 
+.light-switch {
+  width: 50%;
+  font-size: 20px;
 }
 
 .pi-links {
   width: 50%;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .nav-links {
   width: 50%;
 }
 
+.light-switch:hover:not(.activated) {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 .pi-links:hover {
-  color: var(--orange-text);
+  color: var(--orange);
+  cursor: pointer;
 }
 
 .lang-set:hover {
-  color: var(--pink-text);
+  color: var(--pink);
 }

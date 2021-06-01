@@ -28,6 +28,8 @@ let slider = () => {
         } else {
 
           link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+          const body = document.querySelector("body");
+          body.style.overflowY = "hidden";
 
         }
 
