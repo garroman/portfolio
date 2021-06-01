@@ -131,7 +131,7 @@ section {
     position: absolute;
     right: 0px;
     height: 100vh;
-    top: 4vh;
+    top: 50px;
     background-color: var(--nav-bg);
     display: flex;
     flex-direction: column;
@@ -253,4 +253,3 @@ section {
   }
 
 }
-
