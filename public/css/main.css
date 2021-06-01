@@ -54,6 +54,7 @@ section {
   color: var(--press-h2-fg);
   justify-content: center;
   margin-top: 50px;
+  margin-bottom: 10px;
   font-size: 50px;
   font-weight: 900;
 	font-family: "Roboto", sans-serif; 
@@ -233,6 +234,10 @@ section {
 
   #smaller-title {
     display: flex; 
+  }
+
+  #contact-form form{
+    width: 65%;
   }
 
 }
