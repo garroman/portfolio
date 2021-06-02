@@ -316,14 +316,16 @@ section {
 
   #contact-form form button{
     font-size: 15px;
-    height: 50%;
+    height: 60%;
   }
 
   #contact-form form input{
-    height: 50%;
+    font-size: 13px;
+    height: 60%;
   }
 
   #contact-form form textarea{
+    font-size: 14px;
     height: 120%;
   }
 
