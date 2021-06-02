@@ -54,7 +54,7 @@ section {
   color: var(--press-h2-fg);
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   font-size: 50px;
   font-weight: 900;
 	font-family: "Roboto", sans-serif; 
@@ -180,6 +180,14 @@ section {
 
   .info-h3 span{
     font-size: 19px;
+  }
+
+  #navbar ul li a{
+    font-size: 16px;
+  }
+
+  .menu-links ul li{
+    margin: 0px;
   }
 
   .menu {
