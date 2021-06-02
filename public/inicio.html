@@ -18,20 +18,20 @@
     <!-- navbar -->
      <nav id="navbar">
         <ul id="misc-links">
-          <li><a class="light-switch activated" id="sun" title="Switch theme" target="_blank"><i class="fas fa-sun"></i></a></li>
-          <li><a class="light-switch" id="moon" title="Switch theme" target="_blank"><i class="fas fa-moon"></i></a></li>
+          <li><a class="light-switch" id="sun" title="Switch theme" target="_blank"><i class="fas fa-sun"></i></a></li>
+          <li><a class="light-switch activated" id="moon" title="Switch theme" target="_blank"><i class="fas fa-moon"></i></a></li>
           <li class="separator"><a href="">|</a></li>
-          <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-gitlab" title="Gitlab profile" aria-hidden="true"></i></a></li>
-          <li><a class="pi-links" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" title="Linkedin profile" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+          <li><a class="pi-links" href="https://www.gitlab.com/roman927" target="_blank"><i class="fa fa-gitlab" title="Perfil de Gitlab " aria-hidden="true"></i></a></li>
+          <li><a class="pi-links" href="https://www.linkedin.com/in/roman-lopez-garro-0aa8871b5/" title="Perfil de Linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
           <li class="separator"><a href="">|</a></li>
-          <li><a class="lang-set" id="english-switch" title="Language is set to english" href="./index.html">en</a></li>
-          <li><a class="lang-set" id="spanish-switch" title="Set language to spanish"href="./inicio.html">es</a></li>
+          <li><a class="lang-switch" id="english-switch" title="Cambiar idioma a íngles" href="./index.html">en</a></li>
+          <li><a class="lang-switch" id="spanish-switch" title="El idioma esta en español">es</a></li>
         </ul>
 
         <ul class="nav-links">
-          <li><a class="nav-a" data-page="presentation" title="Home section" href="#presentation">inicio</a></li>
-          <li><a class="nav-a" data-page="projects" title="Projects section" href="#projects">proyectos</a></li>
-          <li><a class="nav-a" data-page="contact" title="Contact section" href="#contact">contacto</a></li>
+          <li><a class="nav-a" data-page="presentation" title="Ir a Inicio" href="#presentation">inicio</a></li>
+          <li><a class="nav-a" data-page="projects" title="Ir a Proyectos" href="#projects">proyectos</a></li>
+          <li><a class="nav-a" data-page="contact" title="Ir a Contacto" href="#contact">contacto</a></li>
         </ul>
 
         <div class="menu">
@@ -42,15 +42,22 @@
 
      </nav>
 
+    <div class="smaller-nav">
+      <ul>
+        <li><a class="smaller-a" data-page="presentation" title="Ir a Inicio" href="#presentation">inicio</a></li>
+        <li><a class="smaller-a" data-page="projects" title="Ir a Proyectos" href="#projects">proyectos</a></li>
+        <li><a class="smaller-a" data-page="contact" title="Ir a Contacto" href="#contact">contacto</a></li>
+      </ul>
+    </div>
       
       <!-- presentation -->
       <section id="presentation">
         <div id="pres-content">
           <div id="pres-info">
             <h2 class="title" id="original-title">Hola, soy Róman López Garro</h2>
-            <h2 class="title" id="smaller-title">Hello, I'm Róman</h2>
-						<h3 class="info-h3"><span class="dev-desc">Backend developer y estudiante de computación.</span></h3>
-            <p><a href="#projects"><button class="button">ver proyectos</button></a></p>
+            <h2 class="title spanish-title" id="smaller-title"><span>Hola, soy Róman<span></h2>
+						<h3 class="info-h3"><span class="dev-desc">Backend Developer y estudiante de computación.</span></h3>
+            <p><a href="#projects"><button class="button" title="Ir a proyectos" >ver proyectos</button></a></p>
           </div>
         </div>
       </section> 
@@ -60,7 +67,7 @@
       </section>
 
       <section id="contact">
-          <p class="section-separator">contact me </p>
+          <p class="section-separator">contactáme</p>
           <div id="contact-info">
             <div id="contact-form">
               <form action="https://formsubmit.co/garrodev18@gmail.com" method="POST">
