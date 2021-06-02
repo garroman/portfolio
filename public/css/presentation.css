@@ -45,7 +45,7 @@
   font-size: 60px;
   color: var(--press-h2-fg);
   margin-top: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 	font-weight: 900;
   margin-bottom: 20px;
 }
@@ -57,7 +57,7 @@
 
 .info-h3 {
   font-size: 33px;
-  font-family: 'Roboto', italic;
+  font-family: 'Roboto Mono', italic;
   margin-top: 2%;
   height: 20%;
 	font-weight: 300;
