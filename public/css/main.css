@@ -312,6 +312,26 @@ section {
 
 }
 
+@media (max-height: 360px) {
+
+  #contact-form form button{
+    font-size: 15px;
+    height: 50%;
+  }
+
+  #contact-form form input{
+    height: 50%;
+  }
+
+  #contact-form form textarea{
+    height: 120%;
+  }
+
+  body {
+    height: 1600px;
+  }
+}
+
 .active {
   color: var(--cyan);
 }
