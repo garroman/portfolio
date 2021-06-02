@@ -87,6 +87,6 @@ ul li a{
   cursor: pointer;
 }
 
-.lang-set:hover {
+.lang-switch:hover {
   color: var(--pink);
 }

@@ -25,6 +25,7 @@ html, body {
   width: 100%;
   color: #3c3836;
   height: 100vh;
+  max-height: 100vh;
 }
 
 .button{
@@ -53,7 +54,7 @@ section {
   display: flex;
   color: var(--press-h2-fg);
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 120px;
   margin-bottom: 40px;
   font-size: 50px;
   font-weight: 700;
@@ -121,33 +122,31 @@ section {
   }
 }
 
+.smaller-nav {
+  width: 100%;
+  height: 70px;
+  display: none;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
+  position: fixed;
+  transition: transform 0.5s ease-in;
+}
 
+.smaller-nav ul{
+  background-color: var(--nav-bg);
+  border-radius: 40px;
+  padding-left: 0px;
+}
 
 @media (max-width: 768px) {
 
   body {
     /*overflow-x: hidden;*/
   }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    top: 50px;
-    background-color: var(--nav-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    justify-content: start;
-    width: 35%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
 
-  .nav-links li{
-    margin-top: 90px;
-    opacity: 0;
+  .nav-links {
+    display: none;
   }
 
   .menu {
@@ -172,8 +171,8 @@ section {
 
 }
 
-.active {
-  transform: translateX(0%);
+.activate {
+  display: flex;
 }
 
 @media (max-width: 710px) {
