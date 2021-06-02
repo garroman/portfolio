@@ -137,6 +137,7 @@ section {
   background-color: var(--nav-bg);
   border-radius: 40px;
   padding-left: 0px;
+  width: 55%;
 }
 
 @media (max-width: 768px) {
@@ -276,8 +277,37 @@ section {
 
 @media (max-width: 460px) {
 
+  #pres-info h2{
+    font-size: 35px;
+  }
+
+  .smaller-nav ul {
+    width: 280px;
+  }
   .smaller-a {
     font-size: 14px;
+  }
+
+}
+
+/* HEIGHT MEDIA QUERIES */
+@media (max-height: 640px) {
+
+  #contact-form form{
+    height: 20vh;
+  }
+
+  #contact-form form input{
+    height: 40%;
+  }
+
+  #contact-form form textarea{
+    height: 40%;
+  }
+
+  #contact-form form button{
+    font-size: 15px;
+    height: 40%;
   }
 
 }
