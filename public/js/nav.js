@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   
 
+    slider();
     const smallNav = document.querySelector(".smaller-nav");
     const nav = document.querySelector(".nav-links");
     const smallNavLi = document.querySelectorAll(".smaller-a");
@@ -36,7 +37,6 @@ window.addEventListener("load", () => {
 
     });
 
-    slider();
     navPager(); 
 
 });
