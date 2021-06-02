@@ -41,7 +41,6 @@ window.addEventListener("load", () => {
 
 });
 
-
 let slider = () => {
 
     const menu = document.querySelector(".menu"); 
@@ -55,28 +54,14 @@ let slider = () => {
 
       if (display == "none") {
         smallerNav.style.display = "flex";
+        animateInLinks(smallNavLinks);
       } else {
         smallerNav.style.display = "none";
       }
 
-      // Toggle animation
-      smallNavLinks.forEach((link, index) => {
-        if(link.style.animation) {
-
-          link.style.animation = '';
-
-        } else {
-
-          link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.5}s`;
-          const body = document.querySelector("body");
-          //body.style.overflowY = "hidden";
-
-        }
-
-      });
-
     });
 }
+
 
 const navPager = () => {
     // Section check
@@ -126,8 +111,18 @@ function removeDataPageAttribute(li) {
 }
 
 function setDataPageAttribute(li) {
+
     li.forEach((link,index) => {
         let href = link.hash.split("#")[1];
         link.setAttribute("data-page", href);
     });
 }
+
+function animateInLinks(linksArray) {
+
+    linksArray.forEach((link, index) => {
+        link.style.animation = `fade-in 2s`;
+
+    });
+}
+
