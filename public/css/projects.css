@@ -23,12 +23,32 @@
   background-color: var(--nav-bg);
 }
 
+.fallback-buttons {
+  display: none;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.fallback-buttons button{
+  display: none;
+  margin: 5px;
+}
+
+.fallback-buttons button a{
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
 .project-reference {
   width: 35%;
   height: 100%;
 }
 
-.project-reference .project-image {
+.project-image {
   height: 75%;
   width: 100%;
   display: flex;
@@ -37,7 +57,7 @@
 }
 
 
-.project-reference .project-links {
+.project-links {
   height: 25%;
   width: 100%;
   display: flex;
@@ -45,12 +65,12 @@
   align-items: center;
 }
 
-.project-reference .project-links img {
+.project-links img {
   width: 90%;
   height: 90%;
 }
 
-.project-reference .project-links button {
+.project button {
   margin: 5px;
   border-radius: 10px;
   width: 40%;
@@ -64,11 +84,7 @@
   text-decoration: none;
 }
 
-.project-reference .project-links button i{
-  margin-right: 10px;
-}
-
-.project-reference .project-links .code-button {
+.code-button {
   background-color: var(--code-button-bg);
   border-color: var(--code-button-bg);
 }
@@ -77,11 +93,18 @@
   color: var(--code-button-fg);
 }
 
-.project-reference .project-links .live-button {
+.live-button {
   background-color: var(--live-button-bg);
   border-color: var(--live-button-bg);
 }
 
+.code-button a:hover {
+  color: var(--code-button-hover);
+}
+
+.live-button a:hover {
+  color: var(--live-button-hover);
+}
 .live-button a {
   color: var(--live-button-fg);
 }
@@ -94,7 +117,7 @@
 .project-description .project-title {
   text-transform: uppercase;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 4px;
   display: flex;
   justify-content: center;
   font-family: "Roboto Condensed";
@@ -108,3 +131,4 @@
   font-size: 1.9rem;
   color: var(--project-desc);
 }
+

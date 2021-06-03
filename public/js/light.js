@@ -64,9 +64,11 @@ function setColors(element, toDarkColors = null) {
       body.style.setProperty("--bg", "#1d2021"); 
       body.style.setProperty("--nav-bg", "#000"); 
       body.style.setProperty("--press-h2-fg", "#fff"); 
-      body.style.setProperty("--project-desc", "#fbf1c7"); 
+      body.style.setProperty("--project-desc", "#eee"); 
       body.style.setProperty("--live-button-bg", "#fbf1c7"); 
       body.style.setProperty("--live-button-fg", "#282828"); 
+      body.style.setProperty("--live-button-hover", "#b16286"); 
+      body.style.setProperty("--code-button-hover", "#b8bb26"); 
 
   } else if (!toDarkColors){
 
@@ -76,6 +78,8 @@ function setColors(element, toDarkColors = null) {
       body.style.setProperty("--project-desc", "#1d2021"); 
       body.style.setProperty("--live-button-bg", "#282828"); 
       body.style.setProperty("--live-button-fg", "#fbf1c7"); 
+      body.style.setProperty("--code-button-hover", "#b16286"); 
+      body.style.setProperty("--live-button-hover", "#b8bb26"); 
   }
 }
 

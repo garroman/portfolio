@@ -9,7 +9,7 @@ html, body {
   --dark-pink: #B16286;
   --cyan: #458588;
   --blue: #83a598;
-  --orange: #b8bb26;
+  --green: #b8bb26;
   --yellow: #fabd2f;
   --dark-yellow: #d79921;
   --nav-bg: #fff;
@@ -20,7 +20,9 @@ html, body {
   --text-shadow: 1px 1px 1px #aaa;
   --project-desc: #fbf1c7;
   --live-button-bg: #fbf1c7;
+  --live-button-hover: var(--green);
   --live-button-fg: #282828;
+  --code-button-hover: var(--dark-pink);
   --code-button-bg:  var(--live-button-fg);
   --code-button-fg:  var(--live-button-bg);
 }
@@ -59,11 +61,11 @@ section {
   display: flex;
   color: var(--press-h2-fg);
   justify-content: center;
-  margin-top: 120px;
   margin-bottom: 40px;
   font-size: 50px;
   font-weight: 700;
 	font-family: "Roboto Mono", monospace; 
+  margin-top: 45px;
   text-shadow: var(--text-shadow);
   text-shadow: var(--text-shadow);
 }
@@ -72,6 +74,23 @@ section {
   color: var(--cyan);
 }
 
+
+@media (max-width: 1220px) {
+
+  .project-description .project-title {
+    font-size: 30px;
+  }
+
+  .project-description .desc {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .project-reference .project-links button a{
+    font-size: 16px;
+  }
+}
 
 @media (max-width: 1024px) {
 
@@ -120,6 +139,18 @@ section {
 
   .info-h3 span{
     font-size: 22px;
+  }
+
+  .project-description .project-title {
+    font-size: 25px;
+  }
+
+  .project-description .desc {
+    font-size: 22px;
+  }
+
+  .project-reference .project-links button a {
+    font-size: 13px;
   }
 }
 
@@ -172,6 +203,31 @@ section {
     font-size: 40px;
   }
 
+  .project {
+    flex-direction: column;
+  }
+
+  .project-reference {
+    display: none;
+  }
+
+  .project-description {
+    width: 100%;
+  }
+
+  .project-description .desc{
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  .fallback-buttons {
+    display: flex;
+    position: initial;
+  }
+
+  .fallback-buttons button{
+    display: block;
+  }
 }
 
 @media (max-width: 710px) {
@@ -206,6 +262,10 @@ section {
 
   .smaller-a {
     font-size: 19px;
+  }
+
+  .project-description .desc{
+    font-size: 23px;
   }
 
 }
@@ -272,6 +332,14 @@ section {
     font-size: 15px;
   }
 
+  .project-description .project-title{
+    font-size: 20px;
+  }
+
+  .project-description .desc{
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -282,8 +350,7 @@ section {
 
 }
 
-@media (max-width: 460px) {
-
+@media (max-width: 460px) { 
   #pres-content {
     height: 65%;
   }
@@ -344,8 +411,15 @@ section {
 
 }
 
+@media (max-height: 840px) {
+  #projects{
+    height: 150vh;
+  }
+}
+
 @media (max-height: 640px) {
 
+  /* CONTACT */
   #contact-form form{
     height: 20vh;
   }
@@ -365,6 +439,14 @@ section {
     height: 40%;
   }
 
+  /* PROJECTS */
+  #projects {
+    height: 1200px;
+  }
+
+  .project {
+    height: 25%;
+  }
 }
 
 @media (max-height: 360px) {
