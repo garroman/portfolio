@@ -63,14 +63,10 @@ section {
   text-shadow: var(--text-shadow);
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 480px) {
-
-  #navbar ul li a{
-    font-size: 20px;
-  }
-
+.active {
+  color: var(--cyan);
 }
+
 
 @media (max-width: 1024px) {
 
@@ -140,12 +136,12 @@ section {
   width: 55%;
 }
 
-/* WIDTH MEDIA QUERIES */
-@media (max-width: 768px) {
+.activate {
+  display: flex;
+}
 
-  body {
-    /*overflow-x: hidden;*/
-  }
+/* MAX WIDTH MEDIA QUERIES*/
+@media (max-width: 768px) {
 
   .nav-links {
     display: none;
@@ -171,10 +167,6 @@ section {
     font-size: 40px;
   }
 
-}
-
-.activate {
-  display: flex;
 }
 
 @media (max-width: 710px) {
@@ -277,6 +269,14 @@ section {
 
 }
 
+@media (max-width: 480px) {
+
+  #navbar ul li a{
+    font-size: 20px;
+  }
+
+}
+
 @media (max-width: 460px) {
 
   #pres-content {
@@ -339,7 +339,6 @@ section {
 
 }
 
-/* HEIGHT MEDIA QUERIES */
 @media (max-height: 640px) {
 
   #contact-form form{
@@ -385,8 +384,138 @@ section {
   }
 }
 
-.active {
-  color: var(--cyan);
+/* MIN WIDTH MEDIA QUERIES */
+@media (min-width: 2160px) {
+
+  #navbar {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #navbar ul li a{
+    font-size: 60px;
+    margin: 10px;
+  }
+
+  #pres-info h2{
+    font-size: 9rem;
+  }
+
+  .info-h3 span{
+    font-size: 60px;
+  }
+
+  #pres-info p{
+    margin-top: 150px;
+  }
+
+  #pres-info p button {
+    width: 500px;
+    height: 100px;
+    font-size: 50px;
+  }
+
+  .section-separator {
+    font-size: 12rem;
+  }
+
+  #contact-info {
+    height: 75%;
+  }
+
+  #contact-form form {
+    margin-top: 50px;
+    height: 100%;
+  }
+
+  #contact-form form input, textarea {
+    border-radius: 30px;
+    height: 15%;
+    font-size: 4.5rem;
+  }
+
+  #contact-form form textarea {
+    height: 30%;
+    font-size: 4rem;
+  }
+
+  #contact-form form button {
+    height: 15%;
+    font-size: 5.5rem;
+  }
+
+  body {
+    100vh;
+  }
+
+}
+
+
+@media (min-width: 1921px) {
+
+  #navbar {
+    height: 55px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #navbar ul li a{
+    font-size: 25px;
+    margin: 2px;
+  }
+
+  #pres-info h2{
+    font-size: 4rem;
+  }
+
+  .info-h3 span{
+    font-size: 40px;
+  }
+
+  #pres-info p{
+    margin-top: 60px;
+  }
+
+  #pres-info p button {
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+  }
+
+  .section-separator {
+    font-size: 3.5rem;
+  }
+
+  #contact-info {
+    height: 75%;
+  }
+
+  #contact-form form {
+    margin-top: 30px;
+    height: 100%;
+  }
+
+  #contact-form form input, textarea {
+    border-radius: 13px;
+    height: 13%;
+    font-size: 2rem;
+  }
+
+  #contact-form form textarea {
+    height: 29%;
+    font-size: 2rem;
+  }
+
+  #contact-form form button {
+    height: 15%;
+    font-size: 2.5rem;
+  }
+
+  body {
+    100vh;
+  }
+
 }
 
 /* ----------------------------------------------
