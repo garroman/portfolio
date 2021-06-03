@@ -18,6 +18,11 @@ html, body {
   --projects-bg: var(--bg);
   --contact-bg: #282828; 
   --text-shadow: 1px 1px 1px #aaa;
+  --project-desc: #fbf1c7;
+  --live-button-bg: #fbf1c7;
+  --live-button-fg: #282828;
+  --code-button-bg:  var(--live-button-fg);
+  --code-button-fg:  var(--live-button-bg);
 }
 
 .main {

@@ -4,3 +4,107 @@
   margin-top: 50px;
   background-color: var(--projects-bg);
 }
+
+#projects-info {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.project {
+  margin-top: 25px;
+  width: 65%;
+  height: 30%;
+  display: flex;
+  border-radius: 20px;
+  background-color: var(--nav-bg);
+}
+
+.project-reference {
+  width: 35%;
+  height: 100%;
+}
+
+.project-reference .project-image {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.project-reference .project-links {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-reference .project-links img {
+  width: 90%;
+  height: 90%;
+}
+
+.project-reference .project-links button {
+  margin: 5px;
+  border-radius: 10px;
+  width: 40%;
+  height: 75%;
+  font-size: 1.3rem;
+  border-bottom: 5px;
+}
+
+.project-reference .project-links button a{
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.project-reference .project-links button i{
+  margin-right: 10px;
+}
+
+.project-reference .project-links .code-button {
+  background-color: var(--code-button-bg);
+  border-color: var(--code-button-bg);
+}
+
+.code-button a {
+  color: var(--code-button-fg);
+}
+
+.project-reference .project-links .live-button {
+  background-color: var(--live-button-bg);
+  border-color: var(--live-button-bg);
+}
+
+.live-button a {
+  color: var(--live-button-fg);
+}
+
+.project-description {
+  width: 65%;
+  height: 100%;
+}
+
+.project-description .project-title {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+.project-description .desc{
+  margin: 1px;
+  font-family: "Roboto Condensed";
+  font-size: 1.9rem;
+  color: var(--project-desc);
+}

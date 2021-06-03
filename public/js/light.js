@@ -64,12 +64,18 @@ function setColors(element, toDarkColors = null) {
       body.style.setProperty("--bg", "#1d2021"); 
       body.style.setProperty("--nav-bg", "#000"); 
       body.style.setProperty("--press-h2-fg", "#fff"); 
+      body.style.setProperty("--project-desc", "#fbf1c7"); 
+      body.style.setProperty("--live-button-bg", "#fbf1c7"); 
+      body.style.setProperty("--live-button-fg", "#282828"); 
 
   } else if (!toDarkColors){
 
       body.style.setProperty("--bg", "#eee"); 
       body.style.setProperty("--nav-bg", "#fff"); 
       body.style.setProperty("--press-h2-fg", "#444"); 
+      body.style.setProperty("--project-desc", "#1d2021"); 
+      body.style.setProperty("--live-button-bg", "#282828"); 
+      body.style.setProperty("--live-button-fg", "#fbf1c7"); 
   }
 }
 
