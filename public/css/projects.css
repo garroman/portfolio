@@ -23,6 +23,7 @@
   background-color: var(--nav-bg);
 }
 
+
 .fallback-buttons {
   display: none;
   width: 100%;
@@ -46,34 +47,25 @@
 .project-reference {
   width: 35%;
   height: 100%;
-}
-
-.project-image {
-  height: 75%;
-  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .project-links {
-  height: 25%;
+  height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.project-links img {
-  width: 90%;
-  height: 90%;
+  flex-direction: column;
 }
 
 .project button {
   margin: 5px;
   border-radius: 10px;
-  width: 40%;
+  width: 75%;
   height: 75%;
   font-size: 1.3rem;
   border-bottom: 5px;
@@ -82,6 +74,7 @@
 .project-reference .project-links button a{
   font-weight: 900;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .code-button {
@@ -132,3 +125,20 @@
   color: var(--project-desc);
 }
 
+.project-tools {
+  margin-top: 10px;
+  width: 90%;
+}
+
+.project-tools li{
+
+  font-family: "Roboto Mono";
+  font-weight: 900;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.project-tools li{
+
+    color: #b8bb26;
+}
