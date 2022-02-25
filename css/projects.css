@@ -1,0 +1,144 @@
+/* PROJECTS STYLES */
+
+#projects {
+  margin-top: 50px;
+  background-color: var(--projects-bg);
+}
+
+#projects-info {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.project {
+  margin-top: 25px;
+  width: 65%;
+  height: 30%;
+  display: flex;
+  border-radius: 20px;
+  background-color: var(--nav-bg);
+}
+
+
+.fallback-buttons {
+  display: none;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.fallback-buttons button{
+  display: none;
+  margin: 5px;
+}
+
+.fallback-buttons button a{
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.project-reference {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-links {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project button {
+  margin: 5px;
+  border-radius: 10px;
+  width: 75%;
+  height: 75%;
+  font-size: 1.3rem;
+  border-bottom: 5px;
+}
+
+.project-reference .project-links button a{
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.code-button {
+  background-color: var(--code-button-bg);
+  border-color: var(--code-button-bg);
+}
+
+.code-button a {
+  color: var(--code-button-fg);
+}
+
+.live-button {
+  background-color: var(--live-button-bg);
+  border-color: var(--live-button-bg);
+}
+
+.code-button a:hover {
+  color: var(--code-button-hover);
+}
+
+.live-button a:hover {
+  color: var(--live-button-hover);
+}
+.live-button a {
+  color: var(--live-button-fg);
+}
+
+.project-description {
+  width: 65%;
+  height: 100%;
+}
+
+.project-description .project-title {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+.project-description .desc{
+  margin: 1px;
+  font-family: "Roboto Condensed";
+  font-size: 1.9rem;
+  color: var(--project-desc);
+}
+
+.project-tools {
+  margin-top: 10px;
+  width: 90%;
+}
+
+.project-tools li{
+
+  font-family: "Roboto Mono";
+  font-weight: 900;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.project-tools li{
+
+    color: #b8bb26;
+}

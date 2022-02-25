@@ -1,0 +1,638 @@
+/* GENERAL */
+html, body {
+  background: var(--bg);
+  margin: 0 ;
+  scroll-behavior: smooth;
+
+  /* VARIABLES */
+  --pink: #D3869B;
+  --dark-pink: #B16286;
+  --cyan: #458588;
+  --blue: #83a598;
+  --green: #b8bb26;
+  --yellow: #fabd2f;
+  --orange: #fe8019;
+  --dark-yellow: #d79921;
+  --nav-bg: #fff;
+  --bg: #eee;
+  --press-h2-fg: #444;
+  --projects-bg: var(--bg);
+  --contact-bg: #282828; 
+  --text-shadow: 1px 1px 1px #aaa;
+  --project-desc: #fbf1c7;
+  --live-button-bg: #fbf1c7;
+  --live-button-hover: var(--green);
+  --live-button-fg: #282828;
+  --code-button-hover: var(--dark-pink);
+  --code-button-bg:  var(--live-button-fg);
+  --code-button-fg:  var(--live-button-bg);
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  color: #3c3836;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.button{
+  background-color: var(--nav-bg);
+  border-color: var(--nav-bg);
+  height: 50px;
+  color: var(--pink);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+  border-radius: 8px;
+}
+
+/* SECTION */
+section {
+  padding-top: 40px;
+  height: 100vh;
+  width: 100%;
+}
+
+.section-separator {
+  text-transform: uppercase;
+  display: flex;
+  color: var(--press-h2-fg);
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+	font-family: "Roboto Mono", monospace; 
+  margin-top: 100px;
+  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow);
+}
+
+.active {
+  color: var(--cyan);
+}
+
+
+@media (max-width: 1220px) {
+
+  .project-description .project-title {
+    font-size: 30px;
+  }
+
+  .project-description .desc {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .project-reference .project-links button a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  #navbar ul li a{
+    font-size: 22px;
+  }
+
+
+  #pres-info h2{
+    font-size: 55px;
+  }
+
+  #pres-info h3{
+    font-size: 29px;
+  }
+
+  #pres-info p button{
+    width: 200px;
+    text-transform: capitalize;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 960px) {
+
+  #navbar {
+    justify-content: center;
+
+  }
+
+  .nav-links {
+    width: 50%;
+  }
+
+  #navbar ul li a{
+    font-size: 20px;
+  }
+
+
+  #pres-info h2{
+    font-size: 45px;
+  }
+
+  .info-h3 span{
+    font-size: 22px;
+  }
+
+  .project-description .project-title {
+    font-size: 25px;
+  }
+
+  .project-description .desc {
+    font-size: 22px;
+  }
+
+  .project-reference .project-links button a {
+    font-size: 13px;
+  }
+}
+
+.smaller-nav {
+  width: 100%;
+  height: 70px;
+  display: none;
+  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+  position: fixed;
+  transition: transform 0.5s ease-in;
+}
+
+.smaller-nav ul{
+  background-color: var(--nav-bg);
+  border-radius: 40px;
+  padding-left: 0px;
+  width: 55%;
+}
+
+.activate {
+  display: flex;
+}
+
+/* MAX WIDTH MEDIA QUERIES*/
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  #navbar ul li a{
+    font-size: 22px;
+  }
+
+  #original-title {
+    font-size: 45px;
+  }
+
+  #pres-info h3{
+    font-size: 26px;
+  }
+
+  #pres-info h2{
+    font-size: 40px;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project-reference {
+    display: none;
+  }
+
+  .project-description {
+    width: 100%;
+  }
+
+  .project-description .desc{
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  .fallback-buttons {
+    display: flex;
+    position: initial;
+  }
+
+  .fallback-buttons button{
+    display: block;
+  }
+}
+
+@media (max-width: 710px) {
+
+  #pres-info h2{
+    font-size: 50px;
+  }
+
+  .info-h3 span{
+    font-size: 18px;
+  }
+
+  #navbar ul li a{
+    font-size: 18px;
+  }
+
+  .menu-links ul li{
+    margin: 0px;
+  }
+
+  .menu {
+    margin-left: 29px;
+  }
+
+  #original-title {
+    display: none;
+  }
+
+  #smaller-title {
+    display: flex; 
+  }
+
+  .smaller-a {
+    font-size: 19px;
+  }
+
+  .project-description .desc{
+    font-size: 23px;
+  }
+
+}
+
+@media (max-width: 585px) {
+
+  .smaller-a {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 510px) {
+
+  #pres-info h2{
+    font-size: 40px;
+    height: 50px;
+  }
+
+  .info-h3 span{
+    font-size: 20px;
+  }
+
+  #navbar ul li a{
+    font-size: 19px;
+  }
+
+  #misc-links {
+    margin-right: 10px;
+  }
+
+  #misc-links li{
+    margin: 5px;
+  }
+
+  #pres-info p button{
+    font-size: 16px;
+    width: 150px;
+    height: 35px;
+  }
+
+  .menu {
+    margin-left: 29px;
+  }
+
+  #original-title {
+    display: none;
+  }
+
+  #smaller-title {
+    display: flex; 
+  }
+
+  #contact-form form{
+    width: 65%;
+  }
+
+  .info-h3 span{
+
+    font-size: 15px;
+  }
+
+  .smaller-a {
+    font-size: 15px;
+  }
+
+  .project-description .project-title{
+    font-size: 20px;
+  }
+
+  .project-description .desc{
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  #navbar ul li a{
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 460px) { 
+  #pres-content {
+    height: 65%;
+  }
+
+  #pres-info {
+    height: 260px;
+    align-items: flex-start;
+  }
+
+  .info-h3 {
+    display: none;
+  }
+
+
+   #pres-info h2{
+    letter-spacing: 0px;
+    font-size: 35px;
+    height: 200px;
+  }
+
+  .title span{
+    font-size: 39px;
+    width: 40%;
+    height: 100%;
+  }
+
+
+  #alternative-h3 {
+    color: var(--dark-pink);
+    display: block;
+    font-size: 21px;
+    text-shadow: none;
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 95%;
+    width: 42%;
+  }
+
+  .spanish-title {
+    justify-content: center;
+  }
+
+  .alternative-h3-english {
+    letter-spacing: 0px;
+    margin-left: 25px;
+  }
+
+  .alternative-h3-spanish {
+    letter-spacing: 0px;
+  }
+
+  .smaller-nav ul {
+    width: 280px;
+  }
+  .smaller-a {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-height: 840px) {
+  #projects{
+    height: 150vh;
+  }
+}
+
+@media (max-height: 640px) {
+
+  /* CONTACT */
+  #contact-form form{
+    height: 20vh;
+  }
+
+  #contact-form form input{
+    font-size: 13px;
+    height: 40%;
+  }
+
+  #contact-form form textarea{
+    font-size: 13px;
+    height: 40%;
+  }
+
+  #contact-form form button{
+    font-size: 15px;
+    height: 40%;
+  }
+
+  /* PROJECTS */
+  #projects {
+    height: 1200px;
+  }
+
+  .project {
+    height: 25%;
+  }
+}
+
+@media (max-height: 360px) {
+
+  #contact-form form button{
+    font-size: 15px;
+    height: 60%;
+  }
+
+  #contact-form form input{
+    font-size: 13px;
+    height: 60%;
+  }
+
+  #contact-form form textarea{
+    font-size: 14px;
+    height: 120%;
+  }
+
+  body {
+    height: 1600px;
+  }
+}
+
+/* MIN WIDTH MEDIA QUERIES */
+@media (min-width: 2160px) {
+
+  #navbar {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #navbar ul li a{
+    font-size: 60px;
+    margin: 10px;
+  }
+
+  #pres-info h2{
+    font-size: 9rem;
+  }
+
+  .info-h3 span{
+    font-size: 60px;
+  }
+
+  #pres-info p{
+    margin-top: 150px;
+  }
+
+  #pres-info p button {
+    width: 500px;
+    height: 100px;
+    font-size: 50px;
+  }
+
+  .section-separator {
+    font-size: 12rem;
+  }
+
+  #contact-info {
+    height: 75%;
+  }
+
+  #contact-form form {
+    margin-top: 50px;
+    height: 100%;
+  }
+
+  #contact-form form input, textarea {
+    border-radius: 30px;
+    height: 15%;
+    font-size: 4.5rem;
+  }
+
+  #contact-form form textarea {
+    height: 30%;
+    font-size: 4rem;
+  }
+
+  #contact-form form button {
+    height: 15%;
+    font-size: 5.5rem;
+  }
+
+  body {
+    100vh;
+  }
+
+}
+
+
+@media (min-width: 1921px) {
+
+  #navbar {
+    height: 55px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #navbar ul li a{
+    font-size: 25px;
+    margin: 2px;
+  }
+
+  #pres-info h2{
+    font-size: 4rem;
+  }
+
+  .info-h3 span{
+    font-size: 40px;
+  }
+
+  #pres-info p{
+    margin-top: 60px;
+  }
+
+  #pres-info p button {
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+  }
+
+  .section-separator {
+    font-size: 3.5rem;
+  }
+
+  #contact-info {
+    height: 75%;
+  }
+
+  #contact-form form {
+    margin-top: 30px;
+    height: 100%;
+  }
+
+  #contact-form form input, textarea {
+    border-radius: 13px;
+    height: 13%;
+    font-size: 2rem;
+  }
+
+  #contact-form form textarea {
+    height: 29%;
+    font-size: 2rem;
+  }
+
+  #contact-form form button {
+    height: 15%;
+    font-size: 2.5rem;
+  }
+
+  body {
+    100vh;
+  }
+
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-2 12:43:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
