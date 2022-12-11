@@ -1,145 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title class="en">RLG | Backend Dev</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
-    <link rel="stylesheet" href="./css/nav.css"> 
-    <link rel="stylesheet" href="./css/presentation.css"> 
-    <link rel="stylesheet" href="./css/projects.css"> 
-    <link rel="stylesheet" href="./css/contact.css"> 
-    <link rel="stylesheet" href="./css/main.css"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="main">
+			<div id="beschreibung" class="section">
+				<div id="name">Willkommen! Ich bin Roman</div>
+				<p>Softwareentwickler und Student aus Argentinien. Ich arbeite mit Java-Desktop-Anwendungen und werde Informatik an der Universidad de Buenos Aires studieren.
+				</p>
 
-    <!-- navbar -->
-     <nav id="navbar">
-        <ul id="misc-links">
-          <li><a class="light-switch" id="sun" title="Switch theme" target="_blank"><i class="fas fa-sun"></i></a></li>
-          <li><a class="light-switch activated" id="moon" title="Switch theme" target="_blank"><i class="fas fa-moon"></i></a></li>
-          <li class="separator"><a href="">|</a></li>
-          <li><a class="pi-links" href="https://www.gitlab.com/garroroman" target="_blank"><i class="fa fa-gitlab" title="Perfil de Gitlab " aria-hidden="true"></i></a></li>
-          <li><a class="pi-links" href="https://www.linkedin.com/in/garroroman" title="Perfil de Linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-          <li class="separator"><a href="">|</a></li>
-          <li><a class="lang-switch" id="english-switch" title="Language is set to english" >en</a></li>
-          <li><a class="lang-switch" id="spanish-switch" title="Set language to spanish" href="./esp.html">es</a></li>
-        </ul>
+				<p>
+				Dies ist meine persönliche Seite, auf der ich mich Ihnen vorstelle und meine Ideen über die Themen, die mir am besten gefallen teile.
+				</p>
 
-        <ul class="nav-links">
-          <li><a class="nav-a" data-page="presentation" title="Ir a Inicio" href="#presentation">home</a></li>
-          <li><a class="nav-a" data-page="projects" title="Ir a Proyectos" href="#projects">projects</a></li>
-          <li><a class="nav-a" data-page="contact" title="Ir a Contacto" href="#contact">contact</a></li>
-        </ul>
+				<p>
+				Im Moment gefällt mir die Idee, Blogbeiträge und Uninotizen hier zu veröffentlichen.
+				</p>
 
-        <div class="menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+			</div>
 
-     </nav>
 
-    <div class="smaller-nav">
-      <ul>
-        <li><a class="smaller-a" data-page="presentation" title="Ir a Inicio" href="#presentation">home</a></li>
-        <li><a class="smaller-a" data-page="projects" title="Ir a Proyectos" href="#projects">projects</a></li>
-        <li><a class="smaller-a" data-page="contact" title="Ir a Contacto" href="#contact">contact</a></li>
-      </ul>
-    </div>
-      
-      <!-- presentation -->
-      <section id="presentation">
-        <div id="pres-content">
-          <div id="pres-info">
-            <h2 class="title" id="original-title">Hi, I'm Roman Lopez Garro</h2>
-            <h2 class="title spanish-title" id="smaller-title"><span>Hi, I'm Róman</span><span id="alternative-h3" class="alternative-h3-spanish">Backend developer</span></h2>
-						<h3 class="info-h3"><span class="dev-desc">Backend Developer</span></h3>
-            <p><a href="#projects"><button class="button" title="Go to projects" >view projects</button></a></p>
-          </div>
-        </div>
-      </section> 
+			<div id="erfahrung" class="section">
+				<div class="feldteiler">Berufserfahrung</div>
+				<div class="exp-teilung">
+				<h1>NCR -  (September 1, 2021; bisher)  -  Softwareentwickler: </h1> <!- haupttext ->
+				Bei NCR arbeite ich als Softwareentwickler für die Einzelhandelsystem die in Lateinamerika benutzt wurde.
+				</div>
+			</div>
 
-      <section id="projects">
-          <p class="section-separator">Projects</p>
-          <div id="projects-info">
+			<!--
+			<div id="blog-vorschau" class="section">
+				<div class="feldteiler">Blog</div>
+				<div>
+				<a class="blog-link">#1 Titel  - Datum</a>
 
-            <div class="project">
+				<br>
+				<a>Blogseite</a>
+				</div>
+			</div>
 
-              <div class="project-reference">
-                <div class="project-image">
-                  <img/>
-                </div>
-                <div class="project-links">
-                  <button class="code-button"> <a class="pi-links" href="https://www.gitlab.com/garroroman/tipear" target="_blank">Code</a></button>
-                  <button class="live-button"><a title="View webiste" href="http://tipear.herokuapp.com" target="_blank">Site</a></button>
-                </div>
+			-->
+			<div id="kontakt" class="section">
+				<div class="feldteiler">Kontakt</div>
+					<a href="mailto: garrodev18@gmail.com">EMAIL</a> <a href="https://www.linkedin.com/in/garroroman/" target="_blank">LINKEDIN</a>
+			</div>
 
-              </div>
-              <div class="project-description">
-                <h1 class="project-title">Tipear</h1>
-                <h1 class="desc">
-                  Website to test typing speed, measure it and check your progress over time.
-                </h1>                 
-              </div>
-
-              <div class="fallback-buttons">
-                  <button class="code-button"> <a class="pi-links" href="https://www.gitlab.com/garroroman/tipear" target="_blank">Code</a></button>
-                  <button class="live-button"><a title="View website" href="https://romangarro.tech" target="_blank">Site</a></button>
-              </div>
-            </div>
-
-            <div class="project">
-
-              <div class="project-reference">
-                <div class="project-links">
-                  <button class="code-button"> <a class="pi-links" href="https://www.gitlab.com/garroroman/books-api" target="_blank">Code</a></button>
-                </div>
-
-              </div>
-              <div class="project-description">
-                <h1 class="project-title">Books api</h1>
-                <h1 class="desc">
-                  Api made to fetch, post, put and delete books from a database.
-                  The client must be authorized to make requests to the API.
-                  For this, the client must send a JWT token in the header which
-                  he gets when authenticating.
-                </h1>                 
-              </div>
-
-              <div class="fallback-buttons">
-                  <button class="code-button"> <a class="pi-links" href="https://www.gitlab.com/garroroman/books-api" target="_blank">Code</a></button>
-              </div>
-            </div>
-          </div>
-
-      </section>
-
-      <section id="contact">
-          <p class="section-separator">Contact me</p>
-          <div id="contact-info">
-            <div id="contact-form">
-              <form action="https://formsubmit.co/garrodev18@gmail.com" method="POST">
-                <input name="first-name" placeholder=" Full name" type="text" required />
-                <br>
-                <input name="email" placeholder=" Email" type="email" required />
-                <br>
-                <input name="subject" placeholder=" Subject" type="text" required />
-                <br>
-                <textarea name="message" placeholder=" Message" required ></textarea>
-                <br>
-                <input type="hidden" name="_next" value="https://garroroman.gitlab.io/portfolio">
-                <button class="button" type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-      </section>
-
-    <script src="https://kit.fontawesome.com/570ef02fb1.js" crossorigin="anonymous"></script>
-    <script src="./js/lang.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/light.js"></script>
-  </body>
-</html>
+	</div>
+</body>
