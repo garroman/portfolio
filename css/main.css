@@ -16,11 +16,14 @@ html, body {
 
 	  --hyperlink-color: #e177e5;
 
+	  --violet: #d62adc;
+	  --light-violet: #e177e5;
+
 	 display: flex;	
 	 justify-content: center;
 	 align-items: center;
 	 font-size: 15px;
-  }
+}
 
 #main {
 	/* SIZE */
@@ -30,16 +33,49 @@ html, body {
 	padding: 15px;
 }
 
+#sprache {
+	margin-top: 20px;
+}
+
+#main a {
+	user-select: none;
+}
+
+
+#active {
+	color: var(--violet);
+}
+
+#active:hover {
+	color: var(--violet);
+}
+
+.sprache-button {
+	color: #ddd;
+	background: #000;
+	border-radius: 5px;
+	border-color: #111;
+	font-size: 15px;
+	margin-right: 5px;
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.sprache-button:hover {
+	cursor: pointer;
+	color: var(--light-violet);
+}
+
+
 .section {
 	margin-top: 75px;
 }
 
 .section div {
-	margin-top: 50px;
-}
-
-#main a {
-	color: var(--hyperlink-color);
+	margin-top: 35px;
 }
 
 #beschreibung {
@@ -89,7 +125,7 @@ html, body {
 }
 
 .exp-teilung {
-	background: #282828;
+	background: #141414;
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 6px;
