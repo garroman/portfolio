@@ -6,18 +6,19 @@ html, body {
 	  font-family: "Inter", sans-serif;
 
 	  /* VARIABLES */
-	  --background-color: #121212;
-	  --foreground-color: #aaa;
+	  --background-color: #fff;
+	  --foreground-color: #282828;
 
-	  --secondary-background-color: #131313;
+	  --soft-background: #ddd;
+	  --secondary-background-color: #fff;
 	  --strong-foreground-color: #fff;
 
-	  --feldteiler-fg: #ddd;
+	  --feldteiler-fg: #000;
 
 	  --hyperlink-color: #e177e5;
 
-	  --violet: #d62adc;
-	  --light-violet: #e177e5;
+	  --violet: #bd15c2;
+	  --light-violet:  #db84de;
 
 	 display: flex;	
 	 justify-content: center;
@@ -51,8 +52,8 @@ html, body {
 }
 
 .sprache-button {
-	color: #ddd;
-	background: #000;
+	color: var(--light-violet);
+	background: var(--soft-background);
 	border-radius: 5px;
 	border-color: #111;
 	font-size: 15px;
@@ -108,7 +109,7 @@ html, body {
 #name {
 	font-weight: bold;
 	font-size: 20px;
-	color: #fff;
+	color: var(--foreground-color);
 }
 
 #kontakt a {
@@ -125,12 +126,12 @@ html, body {
 }
 
 .exp-teilung {
-	background: #141414;
+	background: #ddd;
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 6px;
 }
 
 .exp-teilung h1 {
-	color: #ddd;
+	color: var(--foreground-color);
 }
