@@ -6,15 +6,16 @@ html, body {
 	  font-family: "Inter", sans-serif;
 
 	  /* VARIABLES */
-	  --background-color: #f5f5f2;
-	  --foreground-color: #000;
+	  --background-color: #2B2B2B;
+	  --foreground-color: #A9B7C6;
 
 	  --soft-background: #ddd;
 	  /*--secondary-background-color: #bbb; */
 	  --secondary-background-color: var(--background-color);
+	  --secondary-foreground-color: #FFC66D;
 	  --strong-foreground-color: #fff;
 
-	  --feldteiler-fg: #000;
+	  --feldteiler-fg: #AE8ABE;
 
 	  --hyperlink-color: #e177e5;
 
@@ -110,7 +111,7 @@ html, body {
 #name {
 	font-weight: bold;
 	font-size: 20px;
-	color: var(--foreground-color);
+	color: var(--secondary-foreground-color);
 }
 
 #kontakt a {
@@ -127,7 +128,7 @@ html, body {
 }
 
 .exp-teilung {
-	background: #ddd;
+	background: #3A3A3A;
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 6px;
@@ -160,12 +161,11 @@ html, body {
 
 #navbar ul li a {
 	font-weight: bold;
-	color: black;
+	color: #CC7832;
 	text-decoration: none;
-
 }
 
 #navbar ul li a:hover {
 	text-decoration: underline;
-	color: #51cecb;
+	color: var(--feldteiler-fg);
 }
