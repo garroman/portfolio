@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="../css/blog.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="../../index.html">HOME</a></li>
+					<li><a href="">BLOG</a></li>
+					<li><a href="../../faq/faq.html">FAQ</a></li>
+				</ul>
+			</div>
+
+			<article id="article"> 
+				<div id="article-info">
+					<p id="article-title"> Länge des längsten Substrings finden</p>
+					<p id="article-date">16-02-2023</p>
+				</div>
+
+				<div id="article-description">
+					In diesem Beitrag möchte ich kurz über ein Problem auf <i style="color:var(--feldteiler-fg)">Leetcode</i> schreiben.
+					<br><br>
+					Das Problem besteht darin, eine Funktion zu schreiben, die die Länge des längsten Substring ohne sich wiederholende Zeichen in einem String <i class="violet underline">s</i> zurückgibt.
+
+					<br><br>
+					<br><br>
+					<strong style="font-size: 20px">Beispiele:</strong>
+					<br><br>
+					<p class="code">
+						<!-- erste Beispiel-->
+						<strong>Eingabe:</strong> s = "abcd"
+						<br>
+						<strong>Ausgabe:</strong> 4
+						<br>
+						<strong>Erklärung:</strong> Die Antwort ist die gesamte String "abcd", welches eine Länge von 4 hat.
+						<br><br>
+						<br><br>
+
+						<!-- zweite Beispiel-->
+						<strong>Eingabe:</strong> s = "bbbbb"
+						<br>
+						<strong>Ausgabe:</strong> 1
+						<br>
+						<strong>Erklärung:</strong> Die Antwort ist das String "b", welches eine Länge von 1 hat.
+						<br><br>
+						<br><br>
+
+						<!-- dritte Beispiel-->
+						<strong>Eingabe:</strong> s = "pwwkew"
+						<br>
+						<strong>Ausgabe:</strong> 3
+						<br>
+						<strong>Erklärung:</strong> Die Antwort ist das String "wke", welches eine Länge von 3 hat.
+					</p>	
+				</div>
+				<div id="article-content">
+					<strong style="font-size: 20px">Lösungen:</strong>
+					<br><br>
+					Um dieses Problem zu lösen, müssen wir alle maximalen Substrings finden, die keine wiederholdenden Zeichen enthält.
+					<br><br>
+					Ich erkläre zunächst zwei Lösungsansätze, die uns dabei helfen können, dieses Ziel zu erreichen.
+					<br><br>
+					<br><br>
+					Erste Lösung:
+					<br><br>
+					Für diese Methode werden wir das zugehörige Substring finden, das keine wiederholdenden Zeichen enthält, und zwar für alle Zeichen in der Zeichenkette.
+					<br><br>
+						Dazu benötigen wir eine Maximale-Variable erstellen, die wir <i style="color:var(--feldteiler-fg)">maxLength</i> nennen werden.
+					<br>
+					<br>
+					Wir benötigen auch ein sogenannte "outer loop" oder nur einfach eine erste Schleife.
+					<br>
+					Diese Schleife wird durch jedes Zeichen der Zeichenkette geführt werden.
+					<br>
+					<br>
+					Und eine "inner loop" oder zweite Schleife hinein die erste.
+					<br>
+					<br>
+					Ich heiße <i style="color:var(--feldteiler-fg)">outerChar</i> das Zeichen, das in der erste Schleife ist.
+					<br>
+					Und <i style="color:var(--feldteiler-fg)">innerChar</i> das Zeichen, das in der zweite Schleife ist.
+					<br>
+					<br>
+					Wenn <span style="background-color: #222; padding: 5px;border-radius:7px;font-size: 15px;">outerChar == innerChar</span>, dann sagt das uns, dass wir schon eines wiederholdende Zeichen gefunden haben.
+					<br>
+					<br>
+					Dann gleichen wir <i style="color:var(--feldteiler-fg)">maxLength</i> zu max(maxLength, length)
+					
+					<br>
+					<br>
+					<br>
+					<strong style="font-size: 20px; margin-top: 40px;">Code (Java):</strong>
+					<br>
+					<br>
+					<p class="code">
+						<span class="code-block">int maxLength = 0;</span>
+						<span class="code-block">for (int i = 0; i < s.length(); i++) {</span>
+						<span class="code-block">&emsp;char outerChar = s.charAt(i)</span>
+						<span class="code-block">&emsp;for (int j = i + 1; j < s.length(); j++) {</span>
+						<span class="code-block">&emsp;&emsp;char innerChar = s.charAt(j);</span>
+						<span class="code-block">&emsp;&emsp;int actualLength = j - i + 1</span>
+						<span class="code-block">&emsp;&emsp;if (innerChar == outerChar) {</span>
+						<span class="code-block">&emsp;&emsp;&emsp;maxLength = Math.max(maxLength, actualLength - 1);</span>
+						<span class="code-block">&emsp;&emsp;}</span>
+						<span class="code-block">&emsp;}</span>
+						<span class="code-block">&emsp;return maxLength;</span>
+						}
+					</p>
+				</div>
+			</article>
+	</div>
+
+	<script src="js/posts.js"></script>
+</body>

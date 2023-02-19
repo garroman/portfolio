@@ -7,12 +7,12 @@ html, body {
 	  font-weight: 300;
 
 	  /* VARIABLES */
-	  --background-color: #2B2B2B;
+	  --background-color: #131313;
 	  --foreground-color: #A9B7C6;
 
 	  --soft-background: #ddd;
 	  /*--secondary-background-color: #bbb; */
-	  --secondary-background-color: #292929;
+	  --secondary-background-color: #0c0c0c;
 	  --secondary-foreground-color: #FFC66D;
 	  --strong-foreground-color: #fff;
 
@@ -27,12 +27,13 @@ html, body {
 	 justify-content: center;
 	 align-items: center;
 	 font-size: 18px;
+	 width: 100%;
 }
 
 #main {
 	/* SIZE */
-	width: 750px;
 	height: 100vh;
+	height: 100%;
 	background: var(--secondary-background-color);
 	padding: 70px;
 }
