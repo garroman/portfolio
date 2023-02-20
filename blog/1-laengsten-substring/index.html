@@ -65,31 +65,33 @@
 					Ich erkläre zunächst zwei Lösungsansätze, die uns dabei helfen können, dieses Ziel zu erreichen.
 					<br><br>
 					<br><br>
-					Erste Lösung:
+					<strong style="font-size: 20px">Erste Lösung:</strong>
 					<br><br>
 					Für diese Methode werden wir das zugehörige Substring finden, das keine wiederholdenden Zeichen enthält, und zwar für alle Zeichen in der Zeichenkette.
 					<br><br>
-						Dazu benötigen wir eine Maximale-Variable erstellen, die wir <i style="color:var(--feldteiler-fg)">maxLength</i> nennen werden.
+					Dazu benötigen wir eine maximale Variable erstellen, die wir <i style="color:var(--feldteiler-fg)">maxLength</i> bezeichnen werden.
 					<br>
 					<br>
 					Wir benötigen auch ein sogenannte "outer loop" oder nur einfach eine erste Schleife.
 					<br>
-					Diese Schleife wird durch jedes Zeichen der Zeichenkette geführt werden.
+					Diese Schleife wird durch jedes Zeichen der Zeichenkette iterieren.
 					<br>
 					<br>
-					Und eine "inner loop" oder zweite Schleife hinein die erste.
+					Und eine zweite Schleife wird in die erste Schleife eingebettet.
 					<br>
 					<br>
-					Ich heiße <i style="color:var(--feldteiler-fg)">outerChar</i> das Zeichen, das in der erste Schleife ist.
-					<br>
-					Und <i style="color:var(--feldteiler-fg)">innerChar</i> das Zeichen, das in der zweite Schleife ist.
-					<br>
-					<br>
-					Wenn <span style="background-color: #222; padding: 5px;border-radius:7px;font-size: 15px;">outerChar == innerChar</span>, dann sagt das uns, dass wir schon eines wiederholdende Zeichen gefunden haben.
+					Ich bezeichne  das aktuelle Zeichen in der zweiten Schleife als <i style="color:var(--feldteiler-fg)">innerChar</i>
+					und den Index dieses Zeichen als <i style="color:var(--feldteiler-fg)">right</i>.
 					<br>
 					<br>
-					Dann gleichen wir <i style="color:var(--feldteiler-fg)">maxLength</i> zu max(maxLength, length)
-					
+					Wir beenden die zweite Schleife, wenn wir ein Zeichen finden, das bereits im aktuellen Substring enthalten ist, oder wenn wir das Ende der Zeichenkette erreicht haben.
+					<br>
+					<br>
+					Dann aktualisieren wir die Variable <i style="color:var(--feldteiler-fg)">maxLength</i> auf die Länge des letzten Substrings, falls dieser länger ist als der aktuelle Wert von <i style="color:var(--feldteiler-fg)">maxLength</i>.
+					<br>
+					<br>
+					Auf diese Weise können wir am Ende der Zeichenkette die maximale Substring-Länge gefunden und zurückgegeben haben.
+					<br>
 					<br>
 					<br>
 					<br>
@@ -98,17 +100,17 @@
 					<br>
 					<p class="code">
 						<span class="code-block">int maxLength = 0;</span>
+						<span class="code-block">int right = 0;</span>
 						<span class="code-block">for (int i = 0; i < s.length(); i++) {</span>
-						<span class="code-block">&emsp;char outerChar = s.charAt(i)</span>
-						<span class="code-block">&emsp;for (int j = i + 1; j < s.length(); j++) {</span>
-						<span class="code-block">&emsp;&emsp;char innerChar = s.charAt(j);</span>
-						<span class="code-block">&emsp;&emsp;int actualLength = j - i + 1</span>
-						<span class="code-block">&emsp;&emsp;if (innerChar == outerChar) {</span>
-						<span class="code-block">&emsp;&emsp;&emsp;maxLength = Math.max(maxLength, actualLength - 1);</span>
+						<span class="code-block">&emsp;for (right = i + 1; right < s.length(); right++) {</span>
+						<span class="code-block">&emsp;&emsp;char innerChar = s.charAt(right);</span>
+						<span class="code-block">&emsp;&emsp;if (s.indexOf(innerChar, i) != right) {</span>
+						<span class="code-block">&emsp;&emsp;&emsp;break;</span>
 						<span class="code-block">&emsp;&emsp;}</span>
 						<span class="code-block">&emsp;}</span>
-						<span class="code-block">&emsp;return maxLength;</span>
-						}
+						<span class="code-block">&emsp;maxLength = Math.max(maxLength, right - i);</span>
+						<span class="code-block">}</span>
+						return maxLength;
 					</p>
 				</div>
 			</article>
