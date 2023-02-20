@@ -115,3 +115,22 @@ strong {
 	content: "\A\A";
 	white-space: pre;
 }
+
+.article-div {
+}
+
+.article-div h1 {
+	color: var(--feldteiler-fg);
+}
+
+.article-div h2,h3 {
+	color: #CC7832;
+}
+
+#date {
+	color: #6fb5ee;
+}
+
+em {
+	color: var(--feldteiler-fg);
+}
