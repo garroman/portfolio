@@ -5,63 +5,87 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 	<div id="main">
 			<div id="navbar">
-				<ul id="navigation">
-					<li class="nav_list_focused"><a class="nav_list_focused">HOME</a></li>
-					<li><a href="blog/blog.html">BLOG</a></li>
-					<li><a href="faq/faq.html">FAQ</a></li>
+				<ul class="navigation">
+					<li class="nav_list_focused"><a class="nav_list_focused">Home</a></li>
+					<li><a href="blog/blog_de.html">Blog</a></li>
 				</ul>
-
-				<ul id="sprache">
-					<li><a href="index.html">ES</a></li>
-					<li><a href="index_us.html">EN</a></li>
-					<li><a class="nav_list_focused">DE</a></li>
+				<ul id="extras-nav" class="navigation">
+					<li><a class="alternative-button" target="_blank" title="Lebenslauf herunterladen" href="cvs/cv_de.pdf">
+					<img class="alt-btn-icon" src="./icons/cv.png">Lebenslauf</a></li>
+					<li>
+						<a id="sprache-button" class="alternative-button" title="Sprache ändern" style="cursor: pointer;" onclick="showLanguageMenu()">
+							<img class="alt-btn-icon" src="./icons/language2.png">Sprache
+						</a>
+						<div id="sprache-div">
+							<ul id="sprache">
+								<li id="ar"><a href="index.html"><img src="./icons/argentina-flag.png">Español</a></li>
+								<li id="en"><a href="index_en.html"><img src="./icons/us-flag.png">English</a></li>
+								<li id="de"><a id="sprache-focused"><img src="./icons/german-flag.png">Deutsch</a></li>
+							</ul>
+						</div>
+					</li>
 				</ul>
-
 			</div>
 			<div id="beschreibung" class="section">
-				<div id="name">Hallo!</div>
-				<div>
-					<p>Ich bin Roman, Softwareentwickler aus Argentinien. <br><br>
-					Ich arbeite mit Java-Desktop-Anwendungen und werde Informatik an der Universidad de Buenos Aires studieren.
-					</p>
-
-					<p>
-					Dies ist meine persönliche Seite, auf der präsentiere ich mich und teile meine Ideen über die Themen, die mir am besonders interessant sind.
-					</p>
-				</div>
-
+				<div id="name">Roman Lopez Garro</div>
+				<p id="description-ich">Java Developer bei NCR Argentina</a></p>
+				<ul>
+					<li><a target="_blank" href="mailto: garrodev18@gmail.com"><img src="./icons/gmail.png"></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/in/garroroman/"><img src="./icons/linkedin.png"></a></li>
+					<li><a target="_blank" href="https://github.com/rlgarro"><img src="./icons/github.png"></a></li>
+				</ul>
+				<br>
 			</div>
 
+			<div id="mich" class="section">
+				<div class="feldteiler">Über mich</div>
+				<p>
+				Hi 👋! Ich bin Roman, ein <span id="alter"></span>-jähriger Softwareentwickler aus Buenos Aires, Argentinien.
+				<br>
+				</p>
+			</div>
 
 			<div id="erfahrung" class="section">
-				<div class="feldteiler">Meine Berufserfahrung</div>
-				<div class="exp-teilung">
-				<h1>NCR -  (September 1, 2021; bisher)  -  Softwareentwickler: </h1> <!- haupttext ->
-				Bei NCR arbeite ich als Softwareentwickler für die Einzelhandelsystem die in Lateinamerika benutzt wurde.
-				</div>
+					<div class="feldteiler">Berufserfahrung</div>
+					<p>
+					Ich arbeite als Softwareentwickler seit September 2021.
+					<br>
+						Ich wurde von <a href="https://www.ncr.com/" style="text-decoration: none;color: black">NCR</a> eingestellt um das POS-System ARS zu weiterentwicklen.
+					<br>
+					Dort nutze ich Java 1.6 für die Entwicklung und Javascript für das Testing.
+					</p>
 			</div>
 
-			<!--
-			<div id="blog-vorschau" class="section">
-				<div class="feldteiler">Blog</div>
-				<div>
-				<a class="blog-link">#1 Titel  - Datum</a>
-
-				<br>
-				<a>Blogseite</a>
+			<div id="skills" class="section">
+			<div class="feldteiler">Skillset</div>
+			<div id="skillsets" style="display:flex;margin-right: 25px;">
+				<div class="skillset-container">
+					<ul class="skillset-liste">
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">Java</li>
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">Spring (Security, REST)</li>
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">JUnit</li>
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">Hibernate</li>
+					</ul>
+				</div>
+				<div class="skillset-container">
+					<ul class="skillset-liste">
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">Javascript</li>
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">Angular</li>
+					</ul>
+				</div>
+				<div class="skillset-container">
+					<ul class="skillset-liste">
+						<li><img class="alt-btn-icon" src="./icons/right-simple-arrow.png">SQL</li>
+					</ul>
 				</div>
 			</div>
-
-			-->
-			<div id="kontakt" class="section">
-				<div class="feldteiler">Kontakt</div>
-				<div>
-					<a href="mailto: garrodev18@gmail.com">EMAIL</a> <a href="https://www.linkedin.com/in/garroroman/" target="_blank">LINKEDIN</a>
-				</div>
 			</div>
-
 	</div>
+
+	<script src="./js/lang.js"></script>
+
 </body>

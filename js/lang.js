@@ -1,18 +1,39 @@
+showLanguageMenu();
+
+document.addEventListener("click", closeLanguageMenu);
+
 window.addEventListener("load", () => {
-
-    const activeColor = "#B16286";
-    const title = document.querySelector("title");
-    const spanishSwitch = document.getElementById("spanish-switch");
-    const englishSwitch = document.getElementById("english-switch");
-
-    if (title.classList.contains("en")) {
-
-      englishSwitch.style.color = activeColor;
-
-    } else if (title.classList.contains("es")) {
-
-      spanishSwitch.style.color = activeColor;
-
+    const alterElement = document.getElementById("alter");
+    if (alterElement === null) {
+        return;
     }
 
+    const date = new Date();
+    const month = date.getMonth();
+    
+    const alter = (month >= 9) ? date.getFullYear() - 2002 : date.getFullYear() - 2003;
+
+    alterElement.innerHTML = alter;
 });
+
+function closeLanguageMenu(event) {
+  const menu = document.getElementById("sprache-div");
+  const target = event.target;
+
+  const isSpracheButton = target === (document.getElementById("sprache-button"));
+  console.log("is sprache button " + isSpracheButton)
+  if (!menu.contains(target) && !isSpracheButton) {
+    menu.style.display = "none";
+  }
+
+}
+
+
+function showLanguageMenu() {
+  const menu = document.getElementById("sprache-div");
+  if (menu.style.display === "none") {
+    menu.style.display = "flex";
+  } else {
+    menu.style.display = "none";
+  }
+}

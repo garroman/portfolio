@@ -2,31 +2,31 @@
 
 <head>
 	<link rel="stylesheet" href="../../css/main.css">
-  	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/blog.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div id="main">
-			<div id="navbar" style="">
+			<div id="navbar">
 				<ul class="navigation">
-					<li class="nav_list_focused"><a href="../../index.html">Home</a></li>
+					<li class="nav_list_focused"><a href="../../index_en.html">Home</a></li>
 					<li><a class="nav_list_focused">Blog</a></li>
 				</ul>
 				<ul id="extras-nav" class="navigation">
 					<li>
-						<a class="alternative-button" target="_blank" title="Lebenslauf herunterladen" href="../../cvs/cv_es.pdf">
-							<img class="alt-btn-icon" src="../../icons/cv.png">CV
+						<a class="alternative-button" target="_blank" title="Lebenslauf herunterladen" href="../../cvs/cv_en.pdf">
+							<img class="alt-btn-icon" src="../../icons/cv.png">Resume
 						</a>
 					</li>
 					<li>
-						<a id="sprache-button" class="alternative-button" title="Cambiar idioma" style="cursor: pointer;" onclick="showLanguageMenu()">
-							<img class="alt-btn-icon" src="../../icons/language2.png">Idioma
+						<a id="sprache-button" class="alternative-button" title="Switch language" style="cursor: pointer;" onclick="showLanguageMenu()">
+							<img class="alt-btn-icon" src="../../icons/language2.png">Language
 						</a>
 						<div id="sprache-div">
 							<ul id="sprache">
-								<li id="ar"><a id="sprache-focused" href="index.html"><img src="../../icons/argentina-flag.png">Español</a></li>
-								<li id="en"><a href="index_en.html"><img src="../../icons/us-flag.png">English</a></li>
+								<li id="ar"><a href="index.html"><img src="../../icons/argentina-flag.png">Español</a></li>
+								<li id="en"><a id="sprache-focused"><img src="../../icons/us-flag.png">English</a></li>
 								<li id="de"><a href="index_de.html"><img src="../../icons/german-flag.png">Deutsch</a></li>
 							</ul>
 						</div>
@@ -35,36 +35,33 @@
 			</div>
 
 			<article id="article"> 
-  <div class="article-div">
-	<a id="goback-posts" href="../blog_de.html"><img src="../../icons/left-arrow-long.png"> <em>Ir a posts</em></a>
-<h1 id="länge-des-längsten-substrings-finden">Encontrar el tamaño del substring más largo</h1>
+	<a id="goback-posts" href="../blog_de.html"><img src="../../icons/left-arrow-long.png"> <em>Go to posts</em></a>
+  <div class="article-div"><h1 id="länge-des-längsten-substrings-finden">Finding the size of the largest substring</h1>
 <p id="date">16-02-2023</p>
-<p>Este post tratará brevemente sobre un problema que encontrè en <em>Leetcode</em>.</p>
-<p>El problema nos pide crear una función que encuentre el tamaño del substring más largo sin carácteres repetidos en un string <em>s</em> dado.</p>
-<h2 id="beispiele">Ejemplos:</h2>
+<p>This post is aimed to explain the solution to a problem I found on <em>Leetcode</em>.</p>
+<p>The problem is asking to create a function that retrieves the maximum length of a substring without repeating characters inside a string <em>s</em>.</p>
+<h2 id="beispiele">Examples:</h2>
 <p>Input: s = “abcd”<br>
 Output: 4<br>
-Explicación: La respuesta es todo el string “abcd”, el cúal tiene un largo de 4.</p>
+Explanation: The answer is the length of the string “abcd”, which has a length of 4.</p>
 <p>Input: s = “bbbbb”<br>
 Output: 1<br>
-Explicaciòn: La respuesta es el substring “b”, el cúal tiene un largo de 1.</p>
+Explanation: The answer is the length of the substring “b”, which has a length of 1.</p>
 <p>Input: s = “pwwkew”<br>
 Output: 3<br>
-Explicación: La respuesta es el substring “wke”, que tiene un largo de 3.</p>
-<h2 id="lösungen">Soluciones:</h2>
-<p>Para resolver este problema es necesario encontrar todos los substrings sin carácteres repetidos.</p>
-<p>Explicaré a continuación dos formas de resolverlo.</p>
-<p>Todos los ejemplos de código están en Java y representan la solución más no bien un programa listo para ser ejecutado.</p>
-<h3 id="erste-lösung">Primera solución:</h3>
-<p>Para este método se buscará cada substring sin carácteres repetidos del string<br></p>
-<p>Para ello es necesaria una variable que contenga el máximo tamaño encontrado y será llamada <em>maxLength</em>.</p>
-<p>Es necesario un primer bucle que permita recorrer cada carácter del string.<br></p>
-<p>Y un segundo bucle contenido en el primero.</p>
-<p>Se denotará al carácter actual como <em>innerChar</em> y el final del string como <em>right</em>.</p>
-<p>El segundo bucle será terminado cuando se encuentre un carácter que ya esté en el substring actual o cuando se haya llegado al final de la cadena.</p>
-<p>Luego se actualiza el valor <em>maxLength</em> en caso de que este sea menor al valor del último substring encontrado.</p>
-<p>De esta forma se puede llegar a encontrar este valor el cúal representa el máximo largo del substring sin carácteres repetidos en un string.</p>
-<h3 id="code">Código:</h3>
+Explanation: The answer is the length of the substring “wke”, which has a length of 3.</p>
+<h2 id="lösungen">Solutions:</h2>
+<p>To solve this problem, we must find the maximum length between each non repeating character substring in the string.</p>
+<p>For this two solutions will be explained.</p>
+<p>Each code snippet is written in Java, that does however not mean that its runnable code, its just a representation.</p>
+<h3 id="erste-lösung">First solution:</h3>
+<p>For this method each substring will be evaluated and a variable containing the maximum length that will be called <em>maxLength</em>.<br></p>
+<p>Two loops are required, one for the outer character and one for the inner one.<br></p>
+<p>The inner character will be called as <em>innerChar</em> and the index of these character as <em>right</em>.</p>
+<p>The inner loop will be ended when a repeating character is found or the end of the string was reached.</p>
+<p>Then the value of the variable <em>maxLength</em> will be updated in case the last substring length was greater than our variable.</p>
+<p>In this simple way the goal can be reached.</p>
+<h3 id="code">Code:</h3>
 <pre class=" language-java"><code class="prism  language-java"><span class="token keyword">int</span> maxLength <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
@@ -79,18 +76,17 @@ Explicación: La respuesta es el substring “wke”, que tiene un largo de 3.</
 <span class="token punctuation">}</span>
 <span class="token keyword">return</span> maxLength<span class="token punctuation">;</span>
 </code></pre>
-<h3 id="abschluss-der-erste-lösung">Conclusión de la primera solución:</h3>
-<p>Esta solución es suficiente para resolver el problema pero frecuentemente no lo es para otros casos de Input. Es por eso que encontrar la solución es solo el primer paso.</p>
-<p>Se buscan soluciones que sirvan para el contexto en el que se desarrolla el problema y en este caso esta solución es demasiado lenta.</p>
-<p>Es una solución lenta ya que se necesitan de dos bucles para poder iterar mas de una vez cada caracter en el string. Para mejorar la velocidad del álgoritmo sería optimo recorrer el string solo una vez.</p>
-<p>Esta última propuesta será implementada en la segunda solución.</p>
-<h3 id="zweite-lösung">Segunda solución:</h3>
-<p>El método empleado en esta solución se lo conoce en ingles como “Sliding Window Technique”.</p>
-<p>Se selecciona una parte del string como la parte más larga sin carácteres repetidos y se la actualiza al momento de encontrar un carácter repetido.</p>
-<p>Luego de cada carácter se actualizará la variable maxLength en caso de que el substring actualizado sea más largo y el carácter no este repetido en este.</p>
-<p>Para eso utilizaremos un HashMap, asignandolo a la variable que se llamará <em>charMap</em>. Este mapa nos ayudará a mantener un registro de cada carácter que ya haya sido “visto”.</p>
-<p>Para la implementación de la solución son necesarios también dos punteros que serán asignados a variables llamadas <em>left</em> y <em>right</em> respectivamente.</p>
-<h3 id="code-1">Código:</h3>
+<h3 id="abschluss-der-erste-lösung">First solution's conclusion:</h3>
+<p>This solution is enough to solve the problem, but it's a solution which time execution grows exponientally.</p>
+<p>Therefore we aim to create another solution that can run through the string once, a linear solution.</p>
+<p>Such a solution will be implemented as the second solution to the problem.</p>
+<h3 id="zweite-lösung">Second solution:</h3>
+<p>The method used to solve the problem in this solution is called the “Sliding Window Technique”.</p>
+<p>A "window" or greatest (in lenght) substring will be created and updated whenever a repeating character is found.</p>
+<p>And at the end the length of such substring, represented by the variable <em>maxLength</em> will be returned.</p>
+<p>For that it is required to create a Hashmap that will be contained in the variable called <em>charMap</em>. This map will help to maintain a record of the index of every character that we have already "seen" or iterated over.</p>
+<p>And to know the actual indexes of the substring two variables that will be called <em>left</em> and <em>right</em> are required.</p>
+<h3 id="code-1">Code:</h3>
 <pre class=" language-java"><code class="prism  language-java"><span class="token keyword">int</span> maxLength <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
 Map<span class="token operator">&lt;</span>Character<span class="token punctuation">,</span> Integer<span class="token operator">&gt;</span> charIndexMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  
@@ -98,7 +94,7 @@ Map<span class="token operator">&lt;</span>Character<span class="token punctuati
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> right <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> right<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	Character actualChar <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">int</span> index <span class="token operator">=</span> charIndexMap<span class="token punctuation">.</span><span class="token function">getOrDefault</span><span class="token punctuation">(</span>actualChar<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token comment">// ya contenido en el substring.</span>
+	<span class="token comment">// contained in substring.</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;=</span> left<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		left <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
@@ -111,5 +107,6 @@ Map<span class="token operator">&lt;</span>Character<span class="token punctuati
 </code></pre>
 </div>
 
+	<script src="js/posts.js"></script>
 	<script src="../../js/lang.js"></script>
 </body>

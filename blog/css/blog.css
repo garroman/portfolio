@@ -1,17 +1,14 @@
 article { 
 	width: 100%;
 	height: 100%;
-
 	--meta-bg: #000;
 	--post-info-bg: #000;
-
-
 	--titel-fg: white;
-	--thema-fg: #777;
-	--datum-fg: green;
-
+	--thema-fg: #9ec0ca;
+	--datum-fg: #6cc4df;
 	--article-titel-fg: #6fb5ee;
 }
+
 .posten {
 	border-radius: 15px;
 	background: #000;
@@ -40,7 +37,7 @@ article {
 }
 
 .posten a:hover {
-	color: var(--feldteiler-fg);
+	color: var(--thema-fg);
 	text-decoration: underline;
 	cursor: pointer;
 }
@@ -133,4 +130,25 @@ strong {
 
 em {
 	color: var(--feldteiler-fg);
+}
+
+#goback-posts {
+	margin-top: 95px;
+	color: var(--gray);
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	text-decoration: none;
+	width:fit-content;
+}
+
+#goback-posts img {
+	width: 24px;
+	height: 24px;
+	margin-right: 20px;
+}
+
+#goback-posts:hover {
+	text-decoration: underline;
 }

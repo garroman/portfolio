@@ -1,45 +1,111 @@
 /* GENERAL */
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/inter-regular.ttf"), format("truetype");
+}
+
 html, body {
 	  background: var(--background-color);
 	  color: var(--foreground-color);
 	  margin: 0;
 	  font-family: "Inter", sans-serif;
-	  font-weight: 300;
+	  font-weight: 400;
 
 	  /* VARIABLES */
-	  --background-color: #0c0c0c;
-	  --foreground-color: #A9B7C6;
+	  /*--background-color: #0c0c0c; */
+	  --background-color: #ffffff;
+	  --foreground-color: #000000;
 
-	  --soft-background: #ddd;
-	  /*--secondary-background-color: #bbb; */
-	  --secondary-background-color: #0c0c0c;
-	  --secondary-foreground-color: #FFC66D;
-	  --strong-foreground-color: #fff;
+	  /*--soft-background: #ddd; */
+	  --soft-background: var(--background-color);
+	  /*--secondary-background-color: #0c0c0c */
+	  --secondary-background-color: var(--background-color);
+	  /*--secondary-foreground-color: #FFC66D; */
+	  --secondary-foreground-color: var(--foreground-color);
+	  --strong-foreground-color:var(--foreground-color);
 
-	  --feldteiler-fg: #AE8ABE;
 
 	  --hyperlink-color: #e177e5;
 
 	  --violet: #bd15c2;
 	  --light-violet:  #db84de;
 
+	  --cyan: #000000;
+	  --darker-cyan: #1f71b4;
+	  --gray: #7d7d7d;
+	  --light-gray: #ececec;
+
+	  --feldteiler-fg: #000;
+
+	  --nav-bg: var(--background-color);
+	  --sprache-focused-bg: #a2a2a2;
+
 	 display: flex;	
 	 justify-content: center;
 	 align-items: center;
-	 font-size: 18px;
+	 font-size: 21px;
 	 width: 100%;
 }
 
 #main {
-	/* SIZE */
 	background: var(--secondary-background-color);
-	padding: 70px;
+	padding: 15px;
 	height: 100vh;
-	width: 50%;
+	width: 55%;
+	font-family: "Inter", sans-serif;
 }
+
+#selected-sprache {
+	color: var(--cyan);
+	cursor: pointer;
+	font-weight: bolder;
+	background-color: var(--background-color);
+	padding: 6px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.alt-btn-icon {
+	height:25px;
+	width:25px;
+	margin-right: 5px;
+}
+
+.alternative-button {
+	background-color: var(--nav-bg);
+	border-radius: 5px;
+	color: var(--cyan);
+	display: flex;
+	height: 41px;
+	align-items: center;
+}
+
+.alternative-button:hover {
+	color: var(--cyan);
+	background-color: var(--nav-bg);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*
+#selected-sprache:before {
+	content: '';
+	display: block;
+	width: 32px;
+	height: 24px;
+	background-image: url("../flags/german-flag.png");
+	margin-right: 5px;
+}
+*/
 
 #sprache {
 	margin-top: 20px;
+}
+
+#sprache li {
+	margin: 0;
 }
 
 #main a {
@@ -55,6 +121,7 @@ html, body {
 	color: var(--violet);
 }
 
+/*
 .sprache-button {
 	color: var(--light-violet);
 	background: var(--soft-background);
@@ -73,17 +140,43 @@ html, body {
 	cursor: pointer;
 	color: var(--light-violet);
 }
+*/
 
 
 .section {
-	margin-top: 75px;
+	margin-top: 50px;
+	margin-bottom: 20px;
 }
 
-.section div {
-	margin-top: 35px;
+.section p {
+	color: var(--gray);
+	font-size: 20px;
 }
 
-#beschreibung {
+#beschreibung ul {
+	display: flex;
+	justify-content: left;
+	padding: 0;
+	width: 50%;
+	margin-bottom: 50px;
+}
+
+#beschreibung ul li {
+	margin-right: 10px;
+	list-style-type: none;
+}
+
+#beschreibung ul li a{
+	padding: 0;
+}
+
+#beschreibung ul li a img {
+	width: 34px;
+	height: 34px;
+}
+
+#beschreibung ul li a:hover {
+	background-color: var(--background-color);
 }
 
 .feldteiler {
@@ -91,9 +184,8 @@ html, body {
 	margin-bottom: 20px;
 	color: var(--feldteiler-fg);
 	text-decoration: underline;
-	font-weight: bold;
-	font-size: 16px;
-  	/**color: var(--foreground-color);*/
+	font-weight: 600;
+	font-size: 25px;
 }
 
 .blog-link {
@@ -111,17 +203,55 @@ html, body {
 
 
 #name {
-	font-weight: bold;
-	font-size: 20px;
-	color: var(--secondary-foreground-color);
+	font-weight: 600;
+	font-size: 58px;
+	color: #484848;
+	text-shadow: 3px 4px #dfdfdf;
+}
+
+#description-ich {
+	margin-top: 0;
+	font-size: 25px;
+	color: var(--gray);
+}
+
+#kurze-beschreibung {
+	font-size: 25px;
+	color: var(--gray);
+}
+
+
+#skillsets {
+	display: flex;
+}
+
+.skillset-container {
+	margin-right: 30px;
+}
+
+.skillset-container p {
+	color: var(--darker-cyan);
+}
+
+.skillset-container ul {
+	list-style: none;
+}
+
+.skillset-container ul li {
+	display: flex;
+}
+.skillset-liste li {
+	color: var(--gray);
 }
 
 #kontakt a {
-	background-color: var(--hyperlink-color);
-	color: black;
+	background-color: var(--cyan);
+	border-radius: 5px;
+	color: var(--background-color);
 	padding: 5px;
 	text-decoration: none;
 	font-weight: bold;
+	box-shadow: 0px 2px #aaa;
 }
 
 
@@ -143,47 +273,183 @@ html, body {
 */
 
 #navbar {
-	display: flex;
 	justify-content: center;
-}
-
-#navbar {
+	background-color: var(--nav-bg);
+	padding: 9px;
+	border-radius: 5px;
 	width: 100%;
-}
-
-#navbar ul {
+	height: 35px;
 	display: flex;
-	list-style: none;
-	width: 50%;
-	padding: 0px;
-}
-
-#sprache {
-	justify-content: right;
-}
-
-#navigation {
-	justify-content: left;
+	align-items: center;
 }
 
 #navbar ul li {
-	margin-right: 15px;
+	margin-right: 10px;
 }
 
 
-li .nav_list_focused {
+#sprache-div {
+	width: 100%;
+	display: none;
+	justify-content: right;
+	position: relative;
+}
+
+#sprache-div ul {
+	border-radius: 10px;
+}
+
+
+#sprache-div ul li:hover {
+	background-color: var(--light-gray);
+}
+
+#sprache-div ul li{
+	margin: 0;
+	border-radius: 10px;
+	color: var(--cyan);
+	padding: 5px;
+}
+
+#sprache-div ul li #sprache-focused {
+	color: white;
+}
+
+#sprache-div ul li #sprache-focused:hover {
+	background-color: var(--sprache-focused-bg);
+	cursor: default;
+}
+
+#sprache-div ul li a {
 	color: var(--feldteiler-fg);
-	text-decoration: underline;
+	width: 100%;
+}
+
+#sprache {
+	margin: 20px;
+	padding: 0px;
+	display: inline-block;
+	background: #eee;
+	width: 130px;
+	border-radius: 5px;
+	margin: 15px;
+	list-style: none;
+	position: absolute;
+	top: -16px;
+	right: -16px;
+
+}
+
+
+#sprache-focused:hover {
+	background-color: var(--sprache-focused-bg);
+	border-radius: 10px;
+}
+
+
+#sprache-focused a {
+	color: black;
+}
+
+li #sprache-focused {
+	background-color: var(--sprache-focused-bg);
+	color: white;
+	border-radius: 10px;
+}
+
+#sprache li {
+	display: flex;
+	margin: 0;
+}
+
+#sprache li:hover {
+	background: #cfcfcf;
+	cursor: pointer;
+}
+
+#sprache li a {
+	display: flex;
+	padding: 10px;
+}
+
+#sprache li a img{
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
+
+/*
+#sprache li:before {
+	content: '';
+	width: 32px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+#ar:before {
+	background-image: url("../flags/argentina-flag.png");
+}
+
+#en:before {
+	background-image: url("../flags/us-flag.png");
+}
+
+#de:before {
+	background-image: url("../flags/german-flag.png");
+}
+*/
+
+.navigation {
+	display: flex;
+	list-style: none;
+	width: 100%;
+	padding: 0px;
+	margin: 8px;
+	justify-content: left;
+}
+
+#extras-nav {
+	justify-content: right;
+}
+
+#sprache li{
+	margin: 5px;
+}
+
+#sprache a {
+	color: white;
+}
+
+
+#sprache-focused {
+	margin: 0;
+}
+
+
+li .nav_list_focused:hover {
+	color: var(--background-color);
+	background-color: var(--cyan);
+}
+
+li .nav_list_focused {
+	color: var(--background-color);
+	background-color: var(--cyan);
+	box-shadow: 0px 2px #aaa;
+	padding: 8px 20px;
 }
 
 ul li a {
 	font-weight: bold;
-	color: #CC7832;
+	color: var(--gray);
 	text-decoration: none;
+	font-size: 18px;
+	padding: 8px 20px;
+	border-radius: 5px;
 }
 
 ul li a:hover {
-	color: var(--feldteiler-fg);
+	background-color: #ddd;
 }
 
 
