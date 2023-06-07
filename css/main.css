@@ -5,6 +5,20 @@
 	src: url("../fonts/inter-regular.ttf"), format("truetype");
 }
 
+* {
+	  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.icon {
+	color: var(--icons-color);
+	margin-right: 5px;
+}
+
+.contact-icon:hover {
+	color: rgb(112, 168, 206);
+}
+
+
 html, body {
 	  background: var(--background-color);
 	  color: var(--foreground-color);
@@ -41,17 +55,21 @@ html, body {
 	  --nav-bg: var(--background-color);
 	  --sprache-focused-bg: #a2a2a2;
 
+	  --name-color:  #484848;
+	  --name-shadow-color: #dfdfdf;
+	  --icons-color: #000;
+
 	 display: flex;	
 	 justify-content: center;
-	 align-items: center;
-	 font-size: 21px;
+	 font-size: max(0.9vw, 2vw);
+	 min-height: 100vh;
+	 height: fit-content;
 	 width: 100%;
 }
 
 #main {
 	background: var(--secondary-background-color);
 	padding: 15px;
-	height: 100vh;
 	width: 55%;
 	font-family: "Inter", sans-serif;
 }
@@ -102,6 +120,8 @@ html, body {
 
 #sprache {
 	margin-top: 20px;
+	display: inline-block;
+	background-color: red;
 }
 
 #sprache li {
@@ -150,7 +170,6 @@ html, body {
 
 .section p {
 	color: var(--gray);
-	font-size: 20px;
 }
 
 #beschreibung ul {
@@ -168,6 +187,11 @@ html, body {
 
 #beschreibung ul li a{
 	padding: 0;
+
+}
+
+#beschreibung ul li a:hover {
+	text-decoration: underline;
 }
 
 #beschreibung ul li a img {
@@ -185,7 +209,6 @@ html, body {
 	color: var(--feldteiler-fg);
 	text-decoration: underline;
 	font-weight: 600;
-	font-size: 25px;
 }
 
 .blog-link {
@@ -198,34 +221,34 @@ html, body {
 }
 
 #erfahrung h1 {
-	font-size: 15px;
 }
 
 
 #name {
 	font-weight: 600;
-	font-size: 58px;
-	color: #484848;
-	text-shadow: 3px 4px #dfdfdf;
+	max-width: fit-content;
+	color: var(--name-color);
+	text-shadow: 3px 4px var(--name-shadow-color);
+	font-size: max(3vw, 3.5vw);
 }
 
 #description-ich {
 	margin-top: 0;
-	font-size: 25px;
 	color: var(--gray);
 }
 
 #kurze-beschreibung {
-	font-size: 25px;
 	color: var(--gray);
 }
 
 
 #skillsets {
 	display: flex;
+	width: 100%;
 }
 
 .skillset-container {
+	max-width: 30%;
 	margin-right: 30px;
 }
 
@@ -235,13 +258,20 @@ html, body {
 
 .skillset-container ul {
 	list-style: none;
+	padding: 0;
 }
 
 .skillset-container ul li {
+	margin-top: 10px;
 	display: flex;
 }
 .skillset-liste li {
 	color: var(--gray);
+}
+
+.skillset-liste li img {
+	max-width: 24px;
+	width: fit-content;
 }
 
 #kontakt a {
@@ -273,13 +303,18 @@ html, body {
 */
 
 #navbar {
-	justify-content: center;
 	background-color: var(--nav-bg);
 	padding: 9px;
 	border-radius: 5px;
-	width: 100%;
 	height: 35px;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#navbar ul {
+	width: fit-content;
+	height: 100%;
 	align-items: center;
 }
 
@@ -287,6 +322,9 @@ html, body {
 	margin-right: 10px;
 }
 
+#theme-switcher {
+	cursor: pointer;
+}
 
 #sprache-div {
 	width: 100%;
@@ -297,11 +335,12 @@ html, body {
 
 #sprache-div ul {
 	border-radius: 10px;
+	height: fit-content;
 }
 
 
 #sprache-div ul li:hover {
-	background-color: var(--light-gray);
+	background-color: #c4c4c4;
 }
 
 #sprache-div ul li{
@@ -321,7 +360,7 @@ html, body {
 }
 
 #sprache-div ul li a {
-	color: var(--feldteiler-fg);
+	color: #000;
 	width: 100%;
 }
 
@@ -443,7 +482,6 @@ ul li a {
 	font-weight: bold;
 	color: var(--gray);
 	text-decoration: none;
-	font-size: 18px;
 	padding: 8px 20px;
 	border-radius: 5px;
 }
@@ -453,3 +491,31 @@ ul li a:hover {
 }
 
 
+
+/* MEDIA QUERIES */
+
+
+@media (min-width: 1100px) {
+	body {
+		font-size: max(1vw, 1.2vw);
+	}
+
+	
+}
+
+@media (min-width: 1500px) {
+	body {
+		font-size: max(0.8vw, 0.90vw);
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: max(1vw, 2.5vw);
+	}
+
+	#name {
+		font-size: max(2vw, 4vw);
+	}
+
+}

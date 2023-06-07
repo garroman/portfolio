@@ -1189,20 +1189,6 @@ body {
     src: url(/static/fonts/lato-black-italic.798eafd.woff) format("woff")
 }
 
-@font-face {
-    font-family: Roboto Mono;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/static/fonts/RobotoMono-Regular.0b6a547.woff) format("woff")
-}
-
-@font-face {
-    font-family: Roboto Mono;
-    font-style: normal;
-    font-weight: 600;
-    src: url(/static/fonts/RobotoMono-Bold.819f3b2.woff) format("woff")
-}
-
 .prism *, .token.pre.gfm * {
     font-weight: inherit !important
 }
@@ -1458,7 +1444,7 @@ canvas {
 }
 
 body, html {
-    color: rgba(0, 0, 0, .75);
+    color: var(--foreground-color);
     font-size: 16px;
     font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
     font-variant-ligatures: common-ligatures;
@@ -1507,7 +1493,7 @@ a:focus, a:hover {
 }
 
 code, pre, samp {
-    font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace;
+    font-family: Inter, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace;
     font-size: .85em
 }
 
