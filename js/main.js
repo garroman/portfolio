@@ -9,21 +9,22 @@ var gmailImg = document.getElementById("gm-icon");
 var linkedinImg = document.getElementById("linkedin-icon");
 var githubImg = document.getElementById("github-icon");
 
-showLanguageMenu();
 manageTheme();
 
 
-document.addEventListener("click", closeLanguageMenu);
 
 window.addEventListener("load", manageEveryThing);
 window.addEventListener("onhaschange", manageEveryThing);
+
+document.addEventListener("click", closeLanguageMenu);
 
 function closeLanguageMenu(event) {
   const menu = document.getElementById("sprache-div");
   const target = event.target;
 
   const isSpracheButton = target === (document.getElementById("sprache-button"));
-  if (!menu.contains(target) && !isSpracheButton) {
+  const isSpracheIcon = target === (document.getElementById("sprache-icon"));
+  if (!menu.contains(target) && !isSpracheButton && !isSpracheIcon) {
     menu.style.display = "none";
   }
 
@@ -32,7 +33,8 @@ function closeLanguageMenu(event) {
 
 function showLanguageMenu() {
   const menu = document.getElementById("sprache-div");
-  if (menu.style.display === "none") {
+  let menuClosed  = menu.style.display === "none" || menu.style.display.trim().length === 0;
+  if (menuClosed) {
     menu.style.display = "flex";
   } else {
     menu.style.display = "none";
@@ -113,6 +115,16 @@ function manageEveryThing() {
     const alterElement = document.getElementById("alter");
     if (alterElement === null) {
         return;
+    }
+
+    const languageSwitcher = document.getElementById("sprache-button");
+    if (languageSwitcher !== null) {
+      languageSwitcher.addEventListener("click", showLanguageMenu);
+    }
+
+    const iconSprache = document.getElementById("icon-sprache");
+    if (iconSprache !== null) {
+      iconSprache.addEventListener("click", showLanguageMenu);
     }
 
     const date = new Date();
