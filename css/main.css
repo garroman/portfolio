@@ -15,7 +15,7 @@
 }
 
 .contact-icon:hover {
-	color: rgb(112, 168, 206);
+	--icons-color: rgb(112, 168, 206);
 }
 
 
@@ -192,6 +192,7 @@ html, body {
 
 #beschreibung ul li a:hover {
 	text-decoration: underline;
+	--icons-color: rgb(112, 168, 206);
 }
 
 #beschreibung ul li a img {
@@ -336,7 +337,7 @@ html, body {
 #sprache-div ul {
 	border-radius: 10px;
 	height: fit-content;
-	width: 123px;
+	width: fit-content;
 }
 
 
