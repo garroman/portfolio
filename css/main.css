@@ -5,6 +5,21 @@
 	src: url("../fonts/inter-regular.ttf"), format("truetype");
 }
 
+@font-face {
+	font-family: "RobotoSlab";
+	src: url("../fonts/robotoslab/RobotoSlab-Regular.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "RobotoSlabLight";
+	src: url("../fonts/robotoslab/RobotoSlab-Light.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "RobotoSlabMedium";
+	src: url("../fonts/robotoslab/RobotoSlab-Medium.ttf"), format("truetype");
+}
+
 * {
 	  transition: background-color 0.7s ease, color 0.7s ease;
 }
@@ -23,7 +38,7 @@ html, body {
 	  background: var(--background-color);
 	  color: var(--foreground-color);
 	  margin: 0;
-	  font-family: "Inter", sans-serif;
+	  font-family: "RobotoSlab", sans-serif;
 	  font-weight: 400;
 
 	  /* VARIABLES */
@@ -71,7 +86,7 @@ html, body {
 	background: var(--secondary-background-color);
 	padding: 15px;
 	width: 55%;
-	font-family: "Inter", sans-serif;
+	font-family: "RobotoSlab", sans-serif;
 }
 
 #selected-sprache {
@@ -210,6 +225,7 @@ html, body {
 	color: var(--feldteiler-fg);
 	text-decoration: underline;
 	font-weight: 600;
+	font-family: "RobotoSlabMedium";
 }
 
 .blog-link {
@@ -229,7 +245,6 @@ html, body {
 	font-weight: 600;
 	max-width: fit-content;
 	color: var(--name-color);
-	text-shadow: 3px 4px var(--name-shadow-color);
 	font-size: max(3vw, 3.5vw);
 }
 
@@ -311,6 +326,8 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-family: "RobotoSlabMedium";
+	font-size: max(0.6vw, 0.85vw);
 }
 
 #navbar ul {

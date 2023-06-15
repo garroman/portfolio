@@ -112,10 +112,6 @@ function manageEveryThing() {
       themeSwitcher.addEventListener("click", manageTheme);
     }
 
-    const alterElement = document.getElementById("alter");
-    if (alterElement === null) {
-        return;
-    }
 
     const languageSwitcher = document.getElementById("sprache-button");
     if (languageSwitcher !== null) {
@@ -129,6 +125,11 @@ function manageEveryThing() {
 
     const date = new Date();
     const month = date.getMonth();
+
+    const alterElement = document.getElementById("alter");
+    if (alterElement === null) {
+        return;
+    }
     
     const alter = (month >= 9) ? date.getFullYear() - 2002 : date.getFullYear() - 2003;
 
