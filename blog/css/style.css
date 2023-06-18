@@ -1498,7 +1498,7 @@ code, pre, samp {
 }
 
 code *, pre *, samp * {
-    font-size: inherit
+    font-size: 16px;
 }
 
 blockquote {
@@ -1513,7 +1513,7 @@ blockquote {
 }
 
 code {
-    background-color: rgba(0, 0, 0, .05);
+    background-color: var(--code-bg);
     border-radius: 3px;
     padding: 2px 4px
 }
@@ -1525,7 +1525,7 @@ hr {
 }
 
 pre>code {
-    background-color: rgba(0, 0, 0, .05);
+    background-color: var(--code-bg);
     display: block;
     padding: .5em;
     -webkit-text-size-adjust: none;

@@ -23,7 +23,11 @@ function closeLanguageMenu(event) {
   const target = event.target;
 
   const isSpracheButton = target === (document.getElementById("sprache-button"));
-  const isSpracheIcon = target === (document.getElementById("sprache-icon"));
+  const isSpracheIcon = (target === (document.getElementById("sprache-icon")) ||
+                        target.parentElement === document.getElementById("sprache-icon"));
+
+  console.log("Is sprache icon: ", isSpracheIcon)
+  console.log("Target: ", target)
   if (!menu.contains(target) && !isSpracheButton && !isSpracheIcon) {
     menu.style.display = "none";
   }
@@ -59,12 +63,14 @@ function manageTheme() {
 function changeTheme(setToBlack) {
 
   if (setToBlack) {
-    setProperty("--background-color", "#000");
-    setProperty("--foreground-color", "#fff");
+    setProperty("--background-color", "#202020");
+    setProperty("--foreground-color", "#ddd");
     setProperty("--feldteiler-fg", "#fff");
     setProperty("--name-color", "#fff");
+    setProperty("--gray", "#aaa");
     setProperty("--name-shadow-color", "#808080");
-    setProperty("--cyan", "#fff");
+    setProperty("--cyan", "#ddd");
+    setProperty("--code-bg", "#0b0b0b");
   
     // icons colors
     setProperty("--icons-color", "#fff");
@@ -73,12 +79,14 @@ function changeTheme(setToBlack) {
     changePropertyToElements(longArrowImg, "src", "./icons/right-simple-arrow-white.png");
 
   } else {
-    setProperty("--background-color", "#fff");
+    setProperty("--background-color", "#eee");
     setProperty("--foreground-color", "#000");
+    setProperty("--gray", "#555");
     setProperty("--feldteiler-fg", "#000");
     setProperty("--name-color", "#484848");
     setProperty("--name-shadow-color", "#dfdfdf");
     setProperty("--cyan", "#000");
+    setProperty("--code-bg", "#ddd");
 
     // icons color
     setProperty("--icons-color", "#000");

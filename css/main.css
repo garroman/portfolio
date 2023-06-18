@@ -20,6 +20,31 @@
 	src: url("../fonts/robotoslab/RobotoSlab-Medium.ttf"), format("truetype");
 }
 
+@font-face {
+	font-family: "RobotoSlabMedium";
+	src: url("../fonts/robotoslab/RobotoSlab-Medium.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "LatoRegular";
+	src: url("../fonts/lato/Lato-Regular.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "LatoLight";
+	src: url("../fonts/lato/Lato-Light.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url("../fonts/opensans/OpenSans-Regular.ttf"), format("truetype");
+}
+
+@font-face {
+	font-family: "OpenSansLight";
+	src: url("../fonts/opensans/OpenSans-Light.ttf"), format("truetype");
+}
+
 * {
 	  transition: background-color 0.7s ease, color 0.7s ease;
 }
@@ -43,8 +68,8 @@ html, body {
 
 	  /* VARIABLES */
 	  /*--background-color: #0c0c0c; */
-	  --background-color: #ffffff;
-	  --foreground-color: #000000;
+	  --background-color: #dfdfdf;
+	  --foreground-color: #0f0f0f;
 
 	  /*--soft-background: #ddd; */
 	  --soft-background: var(--background-color);
@@ -62,7 +87,7 @@ html, body {
 
 	  --cyan: #000000;
 	  --darker-cyan: #1f71b4;
-	  --gray: #7d7d7d;
+	  --gray: #aaa;
 	  --light-gray: #ececec;
 
 	  --feldteiler-fg: #000;
@@ -225,7 +250,8 @@ html, body {
 	color: var(--feldteiler-fg);
 	text-decoration: underline;
 	font-weight: 600;
-	font-family: "RobotoSlabMedium";
+	font-family: "OpenSansRegular";
+	text-transform: uppercase;
 }
 
 .blog-link {
@@ -326,8 +352,9 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-family: "RobotoSlabMedium";
-	font-size: max(0.6vw, 0.85vw);
+	text-transform: uppercase;
+	font-family: "RobotoSlab";
+	font-size: max(0.7vw, 0.75vw);
 }
 
 #navbar ul {

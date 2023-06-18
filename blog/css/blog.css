@@ -114,7 +114,8 @@ strong {
 	white-space: pre;
 }
 
-.article-div {
+.article-div p {
+	margin: 0;
 }
 
 .article-div h1,h2,h3,p {
