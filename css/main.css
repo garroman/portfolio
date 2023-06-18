@@ -68,7 +68,7 @@ html, body {
 
 	  /* VARIABLES */
 	  /*--background-color: #0c0c0c; */
-	  --background-color: #dfdfdf;
+	  --background-color: #e7e7e7;
 	  --foreground-color: #0f0f0f;
 
 	  /*--soft-background: #ddd; */
@@ -87,7 +87,8 @@ html, body {
 
 	  --cyan: #000000;
 	  --darker-cyan: #1f71b4;
-	  --gray: #aaa;
+	  --gray: #444;
+	  --code-bg: #f2f2f2;
 	  --light-gray: #ececec;
 
 	  --feldteiler-fg: #000;

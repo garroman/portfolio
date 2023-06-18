@@ -9,7 +9,7 @@ var gmailImg = document.getElementById("gm-icon");
 var linkedinImg = document.getElementById("linkedin-icon");
 var githubImg = document.getElementById("github-icon");
 
-manageTheme();
+//manageTheme();
 
 
 
@@ -47,6 +47,7 @@ function showLanguageMenu() {
 
 
 
+/*
 function manageTheme() {
   let usedTheme = window.localStorage.getItem("dark-enabled");
 
@@ -59,11 +60,12 @@ function manageTheme() {
   }
 
 }
+*/
 
 function changeTheme(setToBlack) {
 
   if (setToBlack) {
-    setProperty("--background-color", "#202020");
+    setProperty("--background-color", "#282828");
     setProperty("--foreground-color", "#ddd");
     setProperty("--feldteiler-fg", "#fff");
     setProperty("--name-color", "#fff");
@@ -113,7 +115,7 @@ function changePropertyToElements(elements, property, newValue) {
 
 function manageEveryThing() {
 
-    manageTheme();
+    //manageTheme();
 
     const themeSwitcher = document.getElementById("theme-switcher");
     if (themeSwitcher !== null) {
