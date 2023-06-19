@@ -1,6 +1,17 @@
 /* GENERAL */
 
 @font-face {
+	font-family: "Marriweather";
+	src: url("../fonts/marriweather/Merriweather-Regular.ttf"), format("truetype");
+
+}
+
+@font-face {
+	font-family: "MarriweatherBold";
+	src: url("../fonts/marriweather/Merriweather-Bold.ttf"), format("truetype");
+}
+
+@font-face {
 	font-family: "Inter";
 	src: url("../fonts/inter-regular.ttf"), format("truetype");
 }
@@ -50,12 +61,7 @@
 }
 
 .icon {
-	color: var(--icons-color);
 	margin-right: 5px;
-}
-
-.contact-icon:hover {
-	--icons-color: rgb(112, 168, 206);
 }
 
 
@@ -63,7 +69,7 @@ html, body {
 	  background: var(--background-color);
 	  color: var(--foreground-color);
 	  margin: 0;
-	  font-family: "RobotoSlab", sans-serif;
+	  font-family: "Marriewather", sans-serif;
 	  font-weight: 400;
 
 	  /* VARIABLES */
@@ -85,7 +91,7 @@ html, body {
 	  --violet: #bd15c2;
 	  --light-violet:  #db84de;
 
-	  --cyan: #000000;
+	  --cyan: #eee;
 	  --darker-cyan: #1f71b4;
 	  --gray: #444;
 	  --code-bg: #f2f2f2;
@@ -93,15 +99,13 @@ html, body {
 
 	  --feldteiler-fg: #000;
 
-	  --nav-bg: var(--background-color);
+	  --nav-bg: #d7d7d7;
 	  --sprache-focused-bg: #a2a2a2;
 
 	  --name-color:  #484848;
 	  --name-shadow-color: #dfdfdf;
-	  --icons-color: #000;
+	  --icons-color: #6c6c6c;
 
-	 display: flex;	
-	 justify-content: center;
 	 font-size: max(0.9vw, 2vw);
 	 min-height: 100vh;
 	 height: fit-content;
@@ -112,7 +116,8 @@ html, body {
 	background: var(--secondary-background-color);
 	padding: 15px;
 	width: 55%;
-	font-family: "RobotoSlab", sans-serif;
+	font-family: "Marriweather", sans-serif;
+	margin: 0 auto;
 }
 
 #selected-sprache {
@@ -133,19 +138,15 @@ html, body {
 }
 
 .alternative-button {
-	background-color: var(--nav-bg);
-	border-radius: 5px;
-	color: var(--cyan);
+	color: #757575;
 	display: flex;
-	height: 41px;
 	align-items: center;
 }
 
 .alternative-button:hover {
-	color: var(--cyan);
-	background-color: var(--nav-bg);
 	font-weight: bold;
 	text-decoration: underline;
+	color: #2e7cb9;
 }
 
 /*
@@ -233,7 +234,7 @@ html, body {
 
 #beschreibung ul li a:hover {
 	text-decoration: underline;
-	--icons-color: rgb(112, 168, 206);
+	color: #2e7cb9;
 }
 
 #beschreibung ul li a img {
@@ -352,10 +353,10 @@ html, body {
 	height: 35px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	text-transform: uppercase;
-	font-family: "RobotoSlab";
-	font-size: max(0.7vw, 0.75vw);
+	font-family: "Marriweather";
+	font-size: max(0.6vw, 0.65vw);
 }
 
 #navbar ul {
@@ -366,6 +367,7 @@ html, body {
 
 #navbar ul li {
 	margin-right: 10px;
+	user-select: none;
 }
 
 #theme-switcher {
@@ -382,12 +384,19 @@ html, body {
 #sprache-div ul {
 	border-radius: 10px;
 	height: fit-content;
-	width: fit-content;
+	width: 128px;
 }
 
+p a {
+	color: #000;
+}
+
+p a:hover {
+	color: #2e7c9b;
+}
 
 #sprache-div ul li:hover {
-	background-color: #c4c4c4;
+	background-color: #bfbfbf;
 }
 
 #sprache-div ul li{
@@ -407,7 +416,9 @@ html, body {
 }
 
 #sprache-div ul li a {
-	color: #000;
+	color: #4a4a4a;
+	display: flex;
+	align-items: center;
 	width: 100%;
 }
 
@@ -415,13 +426,13 @@ html, body {
 	margin: 20px;
 	padding: 0px;
 	display: inline-block;
-	background: #eee;
+	background: #cecece;
 	width: 130px;
 	border-radius: 5px;
 	margin: 15px;
 	list-style: none;
 	position: absolute;
-	top: -16px;
+	top: 0px;
 	right: -16px;
 
 }
@@ -512,17 +523,10 @@ li #sprache-focused {
 	margin: 0;
 }
 
-
-li .nav_list_focused:hover {
-	color: var(--background-color);
-	background-color: var(--cyan);
-}
-
 li .nav_list_focused {
-	color: var(--background-color);
-	background-color: var(--cyan);
-	box-shadow: 0px 2px #aaa;
+	color: #2e7c9b;
 	padding: 8px 20px;
+	text-decoration: underline;
 }
 
 ul li a {
@@ -530,11 +534,10 @@ ul li a {
 	color: var(--gray);
 	text-decoration: none;
 	padding: 8px 20px;
-	border-radius: 5px;
 }
 
 ul li a:hover {
-	background-color: #ddd;
+	color: #7594ae;
 }
 
 
