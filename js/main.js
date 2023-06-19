@@ -26,8 +26,6 @@ function closeLanguageMenu(event) {
   const isSpracheIcon = (target === (document.getElementById("sprache-icon")) ||
                         target.parentElement === document.getElementById("sprache-icon"));
 
-  console.log("Is sprache icon: ", isSpracheIcon)
-  console.log("Target: ", target)
   if (!menu.contains(target) && !isSpracheButton && !isSpracheIcon) {
     menu.style.display = "none";
   }
@@ -47,56 +45,6 @@ function showLanguageMenu() {
 
 
 
-/*
-function manageTheme() {
-  let usedTheme = window.localStorage.getItem("dark-enabled");
-
-  if (usedTheme === null || usedTheme === "false") {
-    changeTheme(true);
-    window.localStorage.setItem("dark-enabled", "true");
-  } else {
-    changeTheme(false);
-    window.localStorage.setItem("dark-enabled", "false");
-  }
-
-}
-*/
-
-function changeTheme(setToBlack) {
-
-  if (setToBlack) {
-    setProperty("--background-color", "#282828");
-    setProperty("--foreground-color", "#ddd");
-    setProperty("--feldteiler-fg", "#fff");
-    setProperty("--name-color", "#fff");
-    setProperty("--gray", "#aaa");
-    setProperty("--name-shadow-color", "#808080");
-    setProperty("--cyan", "#ddd");
-    setProperty("--code-bg", "#0b0b0b");
-  
-    // icons colors
-    setProperty("--icons-color", "#fff");
-    
-
-    changePropertyToElements(longArrowImg, "src", "./icons/right-simple-arrow-white.png");
-
-  } else {
-    setProperty("--background-color", "#eee");
-    setProperty("--foreground-color", "#000");
-    setProperty("--gray", "#555");
-    setProperty("--feldteiler-fg", "#000");
-    setProperty("--name-color", "#484848");
-    setProperty("--name-shadow-color", "#dfdfdf");
-    setProperty("--cyan", "#000");
-    setProperty("--code-bg", "#ddd");
-
-    // icons color
-    setProperty("--icons-color", "#000");
-
-    changePropertyToElements(longArrowImg, "src", "./icons/right-simple-arrow.png");
-  }
-} 
-
 function setProperty(property, value) {
   root.style.setProperty(property, value);
 }
@@ -114,8 +62,6 @@ function changePropertyToElements(elements, property, newValue) {
 }
 
 function manageEveryThing() {
-
-    //manageTheme();
 
     const themeSwitcher = document.getElementById("theme-switcher");
     if (themeSwitcher !== null) {
