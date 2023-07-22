@@ -74,7 +74,7 @@ html, body {
 
 	  /* VARIABLES */
 	  /*--background-color: #0c0c0c; */
-	  --background-color: #e7e7e7;
+	  --background-color: #ffffff;
 	  --foreground-color: #0f0f0f;
 
 	  /*--soft-background: #ddd; */
@@ -99,7 +99,7 @@ html, body {
 
 	  --feldteiler-fg: #000;
 
-	  --nav-bg: #d7d7d7;
+	  --nav-bg: #e0e0e0;
 	  --sprache-focused-bg: #a2a2a2;
 
 	  --name-color:  #484848;
@@ -354,7 +354,7 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	font-family: "Marriweather";
 	font-size: max(0.6vw, 0.65vw);
 }
@@ -544,13 +544,21 @@ ul li a:hover {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 481px) {
+	/* Set navbar to be visible */
+	/* Set hamburger menu to be invisible */
 
-@media (min-width: 1100px) {
-	body {
-		font-size: max(1vw, 1.2vw);
-	}
+	 #hamb-menu {
+		display: none;	
+	 }
+}
 
-	
+@media (max-width: 1080px) {
+	/* Set navbar to be invisible */
+	/* Set hamburger menu to be visible */
+}
+
+@media (max-width: 900px) {
 }
 
 @media (min-width: 1500px) {
