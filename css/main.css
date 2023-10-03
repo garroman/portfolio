@@ -99,7 +99,7 @@ html, body {
 
 	  --feldteiler-fg: #000;
 
-	  --nav-bg: #222222;
+	  --nav-bg: var(--background-color);
 	  --nav-fg: #b9b9b9;
 	  --sprache-focused-bg: #a2a2a2;
 
@@ -116,7 +116,7 @@ html, body {
 #main {
 	background: var(--secondary-background-color);
 	padding: 15px;
-	width: 55%;
+	width: 45%;
 	font-family: "Marriweather", sans-serif;
 	margin: 0 auto;
 }
@@ -207,19 +207,20 @@ html, body {
 
 
 .section {
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .section p {
 	color: var(--gray);
+	font-size: 20px;
 }
 
 #beschreibung ul {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	padding: 0;
-	width: 50%;
+	width: 100%;
 	margin-bottom: 50px;
 }
 
@@ -230,7 +231,6 @@ html, body {
 
 #beschreibung ul li a{
 	padding: 0;
-
 }
 
 #beschreibung ul li a:hover {
@@ -272,7 +272,8 @@ html, body {
 
 #name {
 	font-weight: 600;
-	max-width: fit-content;
+	width: 100%;
+	text-align: center;
 	color: var(--name-color);
 	font-size: max(3vw, 3.5vw);
 }
@@ -280,6 +281,10 @@ html, body {
 #description-ich {
 	margin-top: 0;
 	color: var(--gray);
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	font-size: 23px;
 }
 
 #kurze-beschreibung {
@@ -354,7 +359,7 @@ html, body {
 	height: 35px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	text-transform: lowercase;
 	font-family: "Marriweather";
 	font-size: max(0.6vw, 0.65vw);
@@ -535,6 +540,7 @@ ul li a {
 	color: var(--nav-fg);
 	text-decoration: none;
 	padding: 8px 20px;
+	font-size: 18px;
 }
 
 ul li a:hover {
