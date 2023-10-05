@@ -1,59 +1,9 @@
 /* GENERAL */
 
 @font-face {
-	font-family: "Marriweather";
-	src: url("../fonts/marriweather/Merriweather-Regular.ttf"), format("truetype");
+	font-family: "RobotoCondensed";
+	src: url("../fonts/robotoCondensed/Montserrat-Regular.ttf"), format("truetype");
 
-}
-
-@font-face {
-	font-family: "MarriweatherBold";
-	src: url("../fonts/marriweather/Merriweather-Bold.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "Inter";
-	src: url("../fonts/inter-regular.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "RobotoSlab";
-	src: url("../fonts/robotoslab/RobotoSlab-Regular.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "RobotoSlabLight";
-	src: url("../fonts/robotoslab/RobotoSlab-Light.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "RobotoSlabMedium";
-	src: url("../fonts/robotoslab/RobotoSlab-Medium.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "RobotoSlabMedium";
-	src: url("../fonts/robotoslab/RobotoSlab-Medium.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "LatoRegular";
-	src: url("../fonts/lato/Lato-Regular.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "LatoLight";
-	src: url("../fonts/lato/Lato-Light.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "OpenSansRegular";
-	src: url("../fonts/opensans/OpenSans-Regular.ttf"), format("truetype");
-}
-
-@font-face {
-	font-family: "OpenSansLight";
-	src: url("../fonts/opensans/OpenSans-Light.ttf"), format("truetype");
 }
 
 * {
@@ -69,7 +19,7 @@ html, body {
 	  background: var(--background-color);
 	  color: var(--foreground-color);
 	  margin: 0;
-	  font-family: "Marriewather", sans-serif;
+	  font-family: "RobotoCondensed", sans-serif;
 	  font-weight: 400;
 
 	  /* VARIABLES */
@@ -113,11 +63,16 @@ html, body {
 	 width: 100%;
 }
 
+p span {
+	display: block;
+	margin-bottom: 5px;
+}
+
 #main {
 	background: var(--secondary-background-color);
 	padding: 15px;
 	width: 45%;
-	font-family: "Marriweather", sans-serif;
+	font-family: "RobotoCondensed", sans-serif;
 	margin: 0 auto;
 }
 
@@ -253,7 +208,6 @@ html, body {
 	color: var(--feldteiler-fg);
 	text-decoration: underline;
 	font-weight: 600;
-	font-family: "OpenSansRegular";
 	text-transform: uppercase;
 }
 
@@ -361,7 +315,6 @@ html, body {
 	align-items: center;
 	justify-content: center;
 	text-transform: lowercase;
-	font-family: "Marriweather";
 	font-size: max(0.6vw, 0.65vw);
 }
 
