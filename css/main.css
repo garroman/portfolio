@@ -15,6 +15,14 @@
 	src: url("../fonts/ibm-plex-sans/IBMPlexSans-Regular.ttf"), format("truetype");
 }
 
+#colorscheme-button {
+	color: var(--strong-blue);
+	border-radius: 7px; 
+	padding: 3px 5px;
+	size: 30px;
+	font-size: 20px;
+}
+
 * {
 	  transition: background-color 0.7s ease, color 0.7s ease;
 }
@@ -285,7 +293,8 @@ p span {
 	align-items: center;
 	justify-content: right;
 	font-size: 18px;
-	margin-top: 10px;
+	padding-top: 30px;
+	margin-bottom: 30px;
 }
 
 #navbar ul {

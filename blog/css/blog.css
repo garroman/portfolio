@@ -1,3 +1,9 @@
+:root {
+	--post-container-bg: #f9f9f9;
+	--post-container-border-bg: #ddd;
+	--post-container-date-fg: #333;
+}
+
 #posts-container {
 	padding: 15px;
 	font-family: "Open Sans", sans-serif;
@@ -13,9 +19,9 @@
 	margin-top: 10px;
 	padding: 10px;
 	width: 70%;
-	background-color: #f9f9f9;
+	background-color: var(--post-container-bg);
 	border-color: black;
-	border: rgb(209, 209, 209) 3px solid;
+	border: var(--post-container-border-bg) 1px solid;
 }
 
 .post-date {
@@ -23,6 +29,7 @@
 	margin-bottom: 2px;
 	font-style: italic;
 	font-weight: bold;
+	color: var(--post-container-date-fg);
 }
 
 .post-title {
