@@ -702,3 +702,62 @@ ul li a {
 	}
 
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625) {
+
+	body {
+		font-size: 42px;
+	}
+
+	.section p {
+		font-size: 42px;
+	} 
+
+	.container {
+		width: 85%;
+	}
+
+	#navbar {
+		margin-top: 120px;
+		font-size: 45px;
+		margin-bottom: 65px;
+	}
+
+	ul li a {
+		padding: 15px;
+	}
+
+	#name {
+		font-size: 65px;
+	}
+
+	#description-ich {
+		font-size: 40px;
+	}
+
+	#posts-container {
+		width: 85%;
+	}
+
+	#posts-container a {
+		margin-bottom: 10px;
+	}
+
+	.section h2 {
+		font-size: 42px !important;
+	}
+
+	#post-date {
+		font-size: 40px !important;
+	}
+
+	#beschreibung ul li a svg {
+		width: 60px;
+		height: 60px;
+	}
+
+	pre code {
+		font-size: 26px !important;
+	}
+
+}
