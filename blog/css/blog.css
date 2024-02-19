@@ -1,11 +1,11 @@
 :root {
-	--post-container-bg: #f9f9f9;
+	--post-container-bg: #ececec;
 	--post-container-border-bg: #ddd;
-	--post-container-date-fg: #333;
+	--post-container-date-fg: #6d8091;
+	--post-title-fg: #1170ac;
 }
 
 #posts-container {
-	padding: 15px;
 	font-family: "Open Sans", sans-serif;
 	margin: 0 auto;
 	display: flex;
@@ -15,13 +15,11 @@
 }
 
 .post-container {
-	border-radius: 10px;
+	border-radius: 3px;
 	margin-top: 10px;
 	padding: 10px;
-	width: 70%;
 	background-color: var(--post-container-bg);
 	border-color: black;
-	border: var(--post-container-border-bg) 1px solid;
 }
 
 .post-date {
@@ -35,11 +33,33 @@
 .post-title {
 	margin-top: 4px;
 	margin-bottom: 2px;
-	color: var(--darker-cyan)
+	color: var(--post-title-fg);
 }
 
 .post-description {
 	margin-top: 5px;
 	margin-bottom: 3px;
 	color: #a0a0a0;
+}
+
+.section h2 {
+	color: var(--post-title-fg);
+	text-align: center;
+	font-size: 27px;
+}
+
+#post-date {
+	text-align: center;
+	font-size: 13px;
+	width: 100%;
+}
+
+pre code {
+	font-size: 14px;
+}
+
+.post-a {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
 }
