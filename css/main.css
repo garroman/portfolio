@@ -641,11 +641,11 @@ ul li a {
 @media only screen and (min-width: 360px) and (min-height: 760px) and (hover: none) {
 
 	body {
-		font-size: 32px;
+		font-size: 42px;
 	}
 
 	.section p {
-		font-size: 35px;
+		font-size: 42px;
 	} 
 
 	.container {
@@ -653,9 +653,9 @@ ul li a {
 	}
 
 	#navbar {
-		margin-top: 90px;
-		font-size: 35px;
-		margin-bottom: 35px;
+		margin-top: 120px;
+		font-size: 45px;
+		margin-bottom: 65px;
 	}
 
 	ul li a {
@@ -663,15 +663,15 @@ ul li a {
 	}
 
 	#name {
-		font-size: 55px;
+		font-size: 65px;
 	}
 
 	#description-ich {
-		font-size: 30px;
+		font-size: 40px;
 	}
 
 	#posts-container {
-		width: 75%;
+		width: 85%;
 	}
 
 	#posts-container a {
@@ -687,8 +687,12 @@ ul li a {
 	}
 
 	#beschreibung ul li a svg {
-		width: 47px;
-		height: 40px;
+		width: 60px;
+		height: 60px;
+	}
+
+	pre code {
+		font-size: 26px !important;
 	}
 
 }
